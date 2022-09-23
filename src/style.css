@@ -286,7 +286,7 @@ form input[type="submit"]:hover, form input[type="submit"]:active, form input[ty
 
 			} */ }
 /* line 206, sass/libs/_components.scss */
-.quote-slider .flex-control-paging li a { display: block; width: 15px; height: 15px; border: 2px solid #111113; overflow: hiddne; text-indent: -9999px; box-shadow: 0 0 0 2px #4c4c4c; cursor: pointer; }
+.quote-slider .flex-control-paging li a { display: block; width: 15px; height: 15px; border: 2px solid #111113; overflow: hidden; text-indent: -9999px; box-shadow: 0 0 0 2px #4c4c4c; cursor: pointer; }
 /* line 216, sass/libs/_components.scss */
 .quote-slider .flex-control-paging li a.flex-active { background: #ac8074; box-shadow: 0 0 0 2px #ac8074; }
 
@@ -985,7 +985,7 @@ form input[type="submit"]:hover, form input[type="submit"]:active, form input[ty
   .hidden-print { display: none !important; } }
 /* Header Styles */
 /* line 5, sass/layout/_header.scss */
-.site-header { width: 100%; background: rgb(41, 38, 150); padding: 30px 0; margin-bottom: 30px; -webkit-transition: 1s ease; transition: 1s ease; position: fixed; z-index: 2; }
+.site-header { width: 100%; background: rgb(41, 38, 150); padding: 30px 0; padding-left: 20px; margin-bottom: 30px; -webkit-transition: 1s ease; transition: 1s ease; position: fixed; z-index: 2; }
 /*.site-header:hover { background: rgba(0, 0, 60, 1); }*/
 
 
@@ -1121,8 +1121,15 @@ form input[type="submit"]:hover, form input[type="submit"]:active, form input[ty
 
 
 .background{
-  background: url('./images/lady.jpg'); background-attachment: fixed; background-size: contain; background-repeat: no-repeat; background-position: center   center; background-color: rgb(0, 0, 0);
+  background: url('./images/bgg1.jpeg'); background-attachment: fixed; background-size: contain; background-repeat: no-repeat; background-position: center   center; background-color: rgb(0, 0, 0);
   width: 100%;
   height: 100%;
   /* background-color: red; */
+}
+
+.centralize{
+  width: 100%;
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
 }

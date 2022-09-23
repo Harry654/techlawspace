@@ -1,0 +1,9 @@
+#quote-block{
+    margin-left: 50px;
+    /* margin-right: auto; */
+}
+
+.person{
+    display: flex;
+    align-items: center;
+}

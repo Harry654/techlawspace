@@ -83,7 +83,7 @@ function Home() {
 				
 				<div id="welcome" className="fullwidth-block welcome">
 					<div className="container">
-						<div className="row">
+						<div className="centralize">
 							<div className="col-md-8">
                                 <Slide>
                                     <h2>Welcome to the space</h2>
@@ -113,7 +113,7 @@ function Home() {
 				
 				<div className="fullwidth-block" style={{ background: "rgba(255, 255, 255, 0.85)" }}>
 					<div className="container">
-						<div className="row feature-list-section">
+						<div className="centralize feature-list-section">
 
 							
 							<div className="col-md-5">
@@ -125,8 +125,7 @@ function Home() {
 											<small className="feature-subtitle">Our Mission</small>
 										</div>
 									</header>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias doloremque, quis, eaque minus harum modi eius veritatis consequuntur expedita impedit ad, facilis. Asperiores assumenda aperiam atque, accusamus cupiditate vero sit!</p>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias doloremque, quis, eaque minus harum modi eius veritatis consequuntur expedita impedit ad, facilis. Asperiores assumenda aperiam atque, accusamus cupiditate vero sit!</p>
+									<p style={{ textAlign: "justify" }}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias doloremque, quis, eaque minus harum modi eius veritatis consequuntur expedita impedit ad, facilis. Asperiores assumenda aperiam atque, accusamus cupiditate vero sit! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias doloremque, quis, eaque minus harum modi eius veritatis consequuntur expedita impedit ad, facilis. Asperiores assumenda aperiam atque, accusamus cupiditate vero sit!</p>
 									<Link to="/about" className="more-link">Read More</Link>
 								</div>
 							</div>
@@ -142,58 +141,23 @@ function Home() {
 											<small className="feature-subtitle">Our Vision</small>
 										</div>
 									</header>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias doloremque, quis, eaque minus harum modi eius veritatis consequuntur expedita impedit ad, facilis. Asperiores assumenda aperiam atque, accusamus cupiditate vero sit!</p>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias doloremque, quis, eaque minus harum modi eius veritatis consequuntur expedita impedit ad, facilis. Asperiores assumenda aperiam atque, accusamus cupiditate vero sit!</p>
+									<p style={{ textAlign: "justify" }}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias doloremque, quis, eaque minus harum modi eius veritatis consequuntur expedita impedit ad, facilis. Asperiores assumenda aperiam atque, accusamus cupiditate vero sit! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias doloremque, quis, eaque minus harum modi eius veritatis consequuntur expedita impedit ad, facilis. Asperiores assumenda aperiam atque, accusamus cupiditate vero sit!</p>
 									<Link to="/about" className="more-link">Read More</Link>
 								</div>
 							</div>
 						</div>
 						
 						<div id="quote-block" className="quote-section transition" style={{ background: "rgb(41, 38, 150)" }}>
-							<div className="quote-slider">
-								<ul className="slides">
-									<li>
-										<figure className="quote-avatar"><img src={elonMusk} className="avatar" alt="person" /></figure>
-										<blockquote>
-											<p className="quote-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum reiciendis eveniet suscipit, totam doloribus iure quasi quos, quidem quam labore pariatur nesciunt rem unde odio a ex vel ullam, quis!</p>
-											<footer>
-												<cite style={{ border: "2px solid white", borderRadius: "20px", backgroundColor: "transparent", color: "white", padding: "5px", fontWeight: "bold" }}>Elona Musk</cite>
-												<span style={{ color: "#111113" }}>(CEO, Books author)</span>
-											</footer>
-										</blockquote>
-									</li>
-									<li>
-										<figure className="quote-avatar"><img src={ronaldo} className="avatar" alt="avatar" /></figure>
-										<blockquote>
-											<p className="quote-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum reiciendis eveniet suscipit, totam doloribus iure quasi quos, quidem quam labore pariatur nesciunt rem unde odio a ex vel ullam, quis!</p>
-											<footer>
-												<cite style={{ border: "2px solid white", borderRadius: "20px", backgroundColor: "transparent", color: "white", padding: "5px", fontWeight: "bold" }}>Cristiano Ronaldo</cite>
-												<span style={{ color: "#111113" }}>(CEO, Books author)</span>
-											</footer>
-										</blockquote>
-									</li>
-									<li>
-										<figure className="quote-avatar"><img src={logo} className="avatar" alt="avatar" /></figure>
-										<blockquote>
-											<p className="quote-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum reiciendis eveniet suscipit, totam doloribus iure quasi quos, quidem quam labore pariatur nesciunt rem unde odio a ex vel ullam, quis!</p>
-											<footer>
-												<cite style={{ border: "2px solid white", borderRadius: "20px", backgroundColor: "transparent", color: "white", padding: "5px", fontWeight: "bold" }}>Tech Law Space</cite>
-												<span style={{ color: "#111113" }}>(CEO, Books author)</span>
-											</footer>
-										</blockquote>
-									</li>
-									<li>
-										<figure className="quote-avatar"><img src={ford} className="avatar" alt="avatar" /></figure>
-										<blockquote>
-											<p className="quote-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum reiciendis eveniet suscipit, totam doloribus iure quasi quos, quidem quam labore pariatur nesciunt rem unde odio a ex vel ullam, quis!</p>
-											<footer>
-												<cite style={{ border: "2px solid white", borderRadius: "20px", backgroundColor: "transparent", color: "white", padding: "5px", fontWeight: "bold" }}>Henry Ford</cite>
-												<span style={{ color: "#111113" }}>(CEO, Books author)</span>
-											</footer>
-										</blockquote>
-									</li>
-								</ul>
-							</div>
+                            <div className='person'>
+                                <figure className="quote-avatar"><img src={elonMusk} className="avatar" alt="person" /></figure>
+                                <blockquote>
+                                    <p className="quote-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum reiciendis eveniet suscipit, totam doloribus iure quasi quos, quidem quam labore pariatur nesciunt rem unde odio a ex vel ullam, quis!</p>
+                                    <footer>
+                                        <cite style={{ border: "2px solid white", borderRadius: "20px", backgroundColor: "transparent", color: "white", padding: "5px", fontWeight: "bold" }}>Elona Musk</cite>
+                                        <span style={{ color: "#111113" }}>(CEO, Books author)</span>
+                                    </footer>
+                                </blockquote>
+                            </div>
 						</div>
 
 					</div>
