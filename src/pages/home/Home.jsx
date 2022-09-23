@@ -3,9 +3,6 @@ import NavBar from '../../components/navBar/NavBar';
 import Footer from '../../components/footer/Footer';
 import './Home.css';
 import elonMusk from '../../images/elon-musk.jpg';
-import ronaldo from '../../images/ronaldo.jpg';
-import logo from '../../images/logo.png';
-import ford from '../../images/ford.jpg';
 import mission from '../../images/icon-1.png';
 import vision from '../../images/icon-3.png';
 import { Link } from 'react-router-dom';
@@ -20,10 +17,11 @@ function Home() {
         const HALF_PAGE = window.innerHeight/2;
             window.addEventListener('scroll', function() {
                 var welcome_top_val = welcome.getBoundingClientRect().top;
+                var i;
                 if (welcome_top_val < 200) {
                     welcome.style.background = 'rgb(41, 38, 150)';
                     latestNews.style.background = 'rgba(255, 255, 255, 0.95)';
-                    for (var i = 0; i < latestHeaders.length; i++) {
+                    for (i = 0; i < latestHeaders.length; i++) {
                         latestHeaders[i].style.color = 'rgba(0, 0, 60, .95)';
                     }
 
@@ -32,7 +30,7 @@ function Home() {
                 }else{
                     welcome.style.background = 'rgba(0, 0, 0, 0.6)';
                     latestNews.style.background = 'rgb(41, 38, 150)';
-                    for (var i = 0; i < latestHeaders.length; i++) {
+                    for (i = 0; i < latestHeaders.length; i++) {
                         latestHeaders[i].style.color = 'white';
                     }
 
@@ -96,11 +94,11 @@ function Home() {
                                         <h3 id="latest-title" className="latest-header transition">Latest Articles and Announcements</h3>
                                         <ul>
                                             <li>
-                                                <h3><a href="#" className="latest-header transition" style={{ color: "white" }}>Enim ad minim veniam quis nostrud</a></h3>
+                                                <h3><a href="!#" className="latest-header transition" style={{ color: "white" }}>Enim ad minim veniam quis nostrud</a></h3>
                                                 <small className="date">07/04/2014</small>
                                             </li>
                                             <li>
-                                                <h3><a href="#" className="latest-header transition" style={{ color: "white" }}>Duis aute irure dolor in reprehenderit</a></h3>
+                                                <h3><a href="!#" className="latest-header transition" style={{ color: "white" }}>Duis aute irure dolor in reprehenderit</a></h3>
                                                 <small className="date">07/04/2014</small>
                                             </li>
                                         </ul>
