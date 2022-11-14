@@ -19,7 +19,7 @@ function Home() {
                 var welcome_top_val = welcome.getBoundingClientRect().top;
                 var i;
                 if (welcome_top_val < 200) {
-                    welcome.style.background = 'rgb(41, 38, 150)';
+                    welcome.style.background = 'rgb(80, 80, 250)';
                     latestNews.style.background = 'rgba(255, 255, 255, 0.95)';
                     for (i = 0; i < latestHeaders.length; i++) {
                         latestHeaders[i].style.color = 'rgba(0, 0, 60, .95)';
@@ -29,7 +29,7 @@ function Home() {
                     // welcome.style.transition = '.10s ease';
                 }else{
                     welcome.style.background = 'rgba(0, 0, 0, 0.6)';
-                    latestNews.style.background = 'rgb(41, 38, 150)';
+                    latestNews.style.background = 'rgb(80, 80, 250)';
                     for (i = 0; i < latestHeaders.length; i++) {
                         latestHeaders[i].style.color = 'white';
                     }
@@ -90,7 +90,7 @@ function Home() {
 							</div>
 							<div className="col-md-4">
                                 <Slide direction='right'>
-                                    <div id="latest-news" className="latest-news transition" style={{ background: "rgb(41, 38, 150)", borderRadius: "15px" }}>
+                                    <div id="latest-news" className="latest-news transition" style={{ background: "rgb(80, 80, 250)", borderRadius: "15px" }}>
                                         <h3 id="latest-title" className="latest-header transition">Latest Articles and Announcements</h3>
                                         <ul>
                                             <li>
@@ -109,7 +109,7 @@ function Home() {
 					</div> 
 				</div>
 				
-				<div className="fullwidth-block" style={{ background: "rgba(255, 255, 255, 0.85)" }}>
+				<div className="fullwidth-block" style={{ background: "rgba(255, 255, 255, 1)" }}>
 					<div className="container">
 						<div className="centralize feature-list-section">
 
@@ -145,7 +145,7 @@ function Home() {
 							</div>
 						</div>
 						
-						<div id="quote-block" className="quote-section transition" style={{ background: "rgb(41, 38, 150)" }}>
+						<div id="quote-block" className="quote-section transition" style={{ background: "rgb(80, 80, 250)" }}>
                             <div className='person'>
                                 <figure className="quote-avatar"><img src={elonMusk} className="avatar" alt="person" /></figure>
                                 <blockquote>

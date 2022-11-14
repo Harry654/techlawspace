@@ -18,7 +18,7 @@ function About() {
 		// mission.style.borderColor = 'rgba(0, 0, 60, .95)';
 		// mission.style.boxShadow = 'rgba(0, 0, 0, 0.65) 0px 5px 50px';
 		// mission.style.background = '';
-		// vision.style.background = 'rgba(41, 38, 150, 0.8)';
+		// vision.style.background = 'rgba(80, 80, 250, 0.8)';
 
 		window.addEventListener('scroll', function(){
 			// alert(mission)
@@ -27,9 +27,9 @@ function About() {
 			if (mission_top_val < 200) {
 				container.style.background = "rgba(255, 255, 255, 0.99)";
 				// focus on mission
-				// mission.style.borderColor = 'rgba(41, 38, 150, 0.8)';
+				// mission.style.borderColor = 'rgba(80, 80, 250, 0.8)';
 				mission.style.boxShadow = 'rgba(0, 0, 0, 0.65) 0px 5px 50px';
-				// mission.style.background = 'rgba(41, 38, 150, 0.8)';
+				// mission.style.background = 'rgba(80, 80, 250, 0.8)';
 				
 				// vision.style.background = '';
 				// vision.style.borderColor = 'transparent';
@@ -50,9 +50,9 @@ function About() {
 			
 			if (vision_top_val < (HALF_PAGE)) {
 				// focus on vision
-				// vision.style.borderColor = 'rgba(41, 38, 150, 0.8)';
+				// vision.style.borderColor = 'rgba(80, 80, 250, 0.8)';
 				vision.style.boxShadow = 'rgba(0, 0, 0, 0.65) 0px 5px 50px';
-				// vision.style.background = 'rgba(41, 38, 150, 0.8)';
+				// vision.style.background = 'rgba(80, 80, 250, 0.8)';
 				
 				// mission.style.background = '';
 				// mission.style.borderColor = 'transparent';
