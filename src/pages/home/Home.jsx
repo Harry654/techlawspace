@@ -43,13 +43,11 @@ function Home() {
                 var quoteBlock_top_val = quoteBlock.getBoundingClientRect().top;
                 if (quoteBlock_top_val < (HALF_PAGE)) {
                     quoteBlock.style.boxShadow = 'rgba(0, 0, 0, 0.65) 0px 5px 50px';
-                    quoteBlock.style.borderTopLeftRadius = '15px';
-                    quoteBlock.style.borderBottomRightRadius = '15px';
+                    quoteBlock.style.borderRadius = '15px';
                     // quoteBlock.style.transition = '.10s ease';
                 }else{
                     quoteBlock.style.boxShadow = '';
-                    quoteBlock.style.borderTopLeftRadius = '';
-                    quoteBlock.style.borderBottomRightRadius = '';
+                    quoteBlock.style.borderRadius = '';
                     // quoteBlock.style.transition = '.10s ease';
 
                 }

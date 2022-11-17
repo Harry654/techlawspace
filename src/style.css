@@ -239,9 +239,23 @@ form input[type="submit"]:hover, form input[type="submit"]:active, form input[ty
 .feature.boxed p { margin-bottom: 0; }
 
 /* line 131, sass/libs/_components.scss */
-.quote-section { margin: 30px 0; padding: 50px 100px; }
-@media screen and (max-width: 640px) { /* line 131, sass/libs/_components.scss */
-  .quote-section { padding: 30px; } }
+.quote-section { 
+  /* margin: 30px 0;  */
+  padding: 50px 100px; 
+}
+@media screen and (max-width: 1020px) {
+  .person{
+    display: flex;
+    flex-direction: column;
+  }
+  .quote-section { 
+    /* margin: 30px 0;  */
+    padding: 25px 25px; 
+  }
+}
+/* @media screen and (max-width: 640px) { 
+  .quote-section { padding: 30px; } 
+} */
 
 /* line 142, sass/libs/_components.scss */
 .quote-slider .slides { *zoom: 1; list-style: none; padding: 0; margin: 0; }
