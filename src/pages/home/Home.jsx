@@ -151,7 +151,7 @@ function Home() {
                                     <p className="quote-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum reiciendis eveniet suscipit, totam doloribus iure quasi quos, quidem quam labore pariatur nesciunt rem unde odio a ex vel ullam, quis!</p>
                                     <footer>
                                         <cite style={{ border: "2px solid white", borderRadius: "20px", backgroundColor: "transparent", color: "white", padding: "5px", fontWeight: "bold" }}>Elona Musk</cite>
-                                        <span style={{ color: "#111113" }}>(CEO, Books author)</span>
+                                        <span style={{ color: "#111113" }}>(CEO, Lead Lawyer)</span>
                                     </footer>
                                 </blockquote>
                             </div>
