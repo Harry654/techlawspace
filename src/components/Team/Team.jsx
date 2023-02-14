@@ -36,7 +36,7 @@ const Team = ({ members }) => {
           },
         },
         {
-          breakpoint: 375,
+          breakpoint: 200,
           settings: {
             slidesToShow: members.length >= 1 ? 1 : members.length,
             slidesToScroll: 1,
