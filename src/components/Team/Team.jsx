@@ -8,8 +8,8 @@ const Team = ({ members }) => {
       dots: true,
       infinite: true,
       speed: 500,
-      slidesToShow: 5,
-      slidesToScroll: 1,
+      slidesToShow: members.length >= 5 ? 5 : members.length,
+      slidesToScroll: 4,
       style: {
         rowGap: 50
       },
@@ -17,28 +17,28 @@ const Team = ({ members }) => {
         {
           breakpoint: 768,
           settings: {
-            slidesToShow: 4,
-            slidesToScroll: 1,
+            slidesToShow: members.length >= 4 ? 4 : members.length,
+            slidesToScroll: 3,
           },
         },
         {
           breakpoint: 720,
           settings: {
-            slidesToShow: 3,
-            slidesToScroll: 1,
+            slidesToShow: members.length >= 3 ? 3 : members.length,
+            slidesToScroll: 2,
           },
         },
         {
           breakpoint: 580,
           settings: {
-            slidesToShow: 2,
-            slidesToScroll: 1,
+            slidesToShow: members.length >= 2 ? 2 : members.length,
+            slidesToScroll: 2,
           },
         },
         {
           breakpoint: 375,
           settings: {
-            slidesToShow: 1,
+            slidesToShow: members.length >= 1 ? 1 : members.length,
             slidesToScroll: 1,
           }
         }
