@@ -8,21 +8,28 @@ const Team = ({ members }) => {
       dots: true,
       infinite: true,
       speed: 500,
-      slidesToShow: 3,
+      slidesToShow: 5,
       slidesToScroll: 1,
       responsive: [
         {
           breakpoint: 768,
           settings: {
-            slidesToShow: 1,
+            slidesToShow: 3,
             slidesToScroll: 1,
           },
         },
-      ],
+        {
+          breakpoint: 375,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          }
+        }
+      ]
     };
   
     return (
-      <div className="team">
+      <div style={{ width: '100%' }}>
         <Slider {...settings}>
           {members.map((member, index) => (
             <div key={index}>

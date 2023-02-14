@@ -1,31 +1,32 @@
-import React, { useState } from 'react';
-import Modal from 'react-modal';
+import React, { useState } from "react";
+import Modal from "react-modal";
+import "./TeamMember.css";
 
 const TeamMember = ({ name, position, image, bio }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const openModal = () => {
-    setIsOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsOpen(false);
-  };
+  const [modalIsOpen, setModalIsOpen] = useState(false);
 
   return (
-    <>
-      <div onClick={openModal}>
+    <div>
+      <div className="team-member" onClick={() => setModalIsOpen(true)}>
         <img src={image} alt={name} />
         <h3>{name}</h3>
         <p>{position}</p>
       </div>
-      <Modal isOpen={isOpen} onRequestClose={closeModal}>
-        <h2>{name}</h2>
-        <img src={image} alt={name} />
-        <p>{bio}</p>
-        <button onClick={closeModal}>Close</button>
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={() => setModalIsOpen(false)}
+        contentLabel="Team Member Details"
+        overlayClassName="modal-overlay"
+        className="modal"
+      >
+        <div className="modal-content">
+          <button onClick={() => setModalIsOpen(false)}>Close</button>
+          <h2>{name}</h2>
+          <img src={image} alt={name} />
+          <p>{bio}</p>
+        </div>
       </Modal>
-    </>
+    </div>
   );
 };
 
