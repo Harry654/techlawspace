@@ -243,8 +243,9 @@ form input[type="submit"]:hover, form input[type="submit"]:active, form input[ty
   margin: 30px 0; 
   margin-right: 30px;
   padding: 50px 100px; 
-  min-width: 480px;
+  min-width: 400px;
 }
+
 @media screen and (max-width: 1020px) {
   .person{
     display: flex;
@@ -1010,7 +1011,10 @@ form input[type="submit"]:hover, form input[type="submit"]:active, form input[ty
 
 .avatar { height: 150px; width: 150px; border-radius: 100%; }
 
-.quote-content, .welcome-content { color: white; }
+.quote-content, .welcome-content { 
+  color: white;
+  text-align: justify;
+}
 
 /* line 13, sass/layout/_header.scss */
 #branding { float: left; }

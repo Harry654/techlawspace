@@ -1,0 +1,4 @@
+home - change text
+about us - change pictures and text
+our team page - profiles that popup onclick
+publications - centurion style

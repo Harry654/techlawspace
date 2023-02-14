@@ -7,6 +7,7 @@ import OurTeam from './pages/ourTeam/OurTeam';
 import Publications from './pages/publications/Publications';
 
 function App() {
+  console.log(process.env.NODE_ENV)
   return (
     <BrowserRouter>
       <Routes>
