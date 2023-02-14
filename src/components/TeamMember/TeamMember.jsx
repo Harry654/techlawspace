@@ -8,7 +8,7 @@ const TeamMember = ({ name, position, image, bio }) => {
   return (
     <div>
       <div className="team-member" onClick={() => setModalIsOpen(true)}>
-        <img src={image} alt={name} />
+        <img src={require('../../images/bg.jpg')} alt={name} />
         <h3>{name}</h3>
         <p>{position}</p>
       </div>
@@ -20,10 +20,11 @@ const TeamMember = ({ name, position, image, bio }) => {
         className="modal"
       >
         <div className="modal-content">
-          <button onClick={() => setModalIsOpen(false)}>Close</button>
+          {/* <button style={{ marginLeft: 'auto' }} onClick={() => setModalIsOpen(false)}>Close</button> */}
+          <img src={require('../../images/bg.jpg')} alt={name} />
           <h2>{name}</h2>
-          <img src={image} alt={name} />
-          <p>{bio}</p>
+          <p style={{ textAlign: 'justify' }}>{bio}</p>
+          <p>Member since 2020</p>
         </div>
       </Modal>
     </div>

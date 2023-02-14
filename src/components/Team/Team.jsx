@@ -10,11 +10,28 @@ const Team = ({ members }) => {
       speed: 500,
       slidesToShow: 5,
       slidesToScroll: 1,
+      style: {
+        rowGap: 50
+      },
       responsive: [
         {
           breakpoint: 768,
           settings: {
+            slidesToShow: 4,
+            slidesToScroll: 1,
+          },
+        },
+        {
+          breakpoint: 720,
+          settings: {
             slidesToShow: 3,
+            slidesToScroll: 1,
+          },
+        },
+        {
+          breakpoint: 580,
+          settings: {
+            slidesToShow: 2,
             slidesToScroll: 1,
           },
         },

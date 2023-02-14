@@ -1,0 +1,50 @@
+[
+    {
+      "name": "John Doe",
+      "position": "CEO",
+      "image": "https://via.placeholder.com/150",
+      "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit nibh ut massa scelerisque, vitae blandit turpis mattis. Sed convallis, augue at bibendum tincidunt, justo velit pretium orci, non tristique sapien odio ut felis."
+    },
+    {
+      "name": "Jane Smith",
+      "position": "CTO",
+      "image": "https://via.placeholder.com/150",
+      "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit nibh ut massa scelerisque, vitae blandit turpis mattis. Sed convallis, augue at bibendum tincidunt, justo velit pretium orci, non tristique sapien odio ut felis."
+    },
+    {
+      "name": "Bob Johnson",
+      "position": "Marketing Director",
+      "image": "https://via.placeholder.com/150",
+      "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit nibh ut massa scelerisque, vitae blandit turpis mattis. Sed convallis, augue at bibendum tincidunt, justo velit pretium orci, non tristique sapien odio ut felis."
+    },
+    {
+      "name": "Sarah Lee",
+      "position": "Sales Manager",
+      "image": "https://via.placeholder.com/150",
+      "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit nibh ut massa scelerisque, vitae blandit turpis mattis. Sed convallis, augue at bibendum tincidunt, justo velit pretium orci, non tristique sapien odio ut felis."
+    },
+    {
+      "name": "Tom Wilson",
+      "position": "Product Manager",
+      "image": "https://via.placeholder.com/150",
+      "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit nibh ut massa scelerisque, vitae blandit turpis mattis. Sed convallis, augue at bibendum tincidunt, justo velit pretium orci, non tristique sapien odio ut felis."
+    },
+    {
+      "name": "Emily Davis",
+      "position": "Customer Support",
+      "image": "https://via.placeholder.com/150",
+      "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit nibh ut massa scelerisque, vitae blandit turpis mattis. Sed convallis, augue at bibendum tincidunt, justo velit pretium orci, non tristique sapien odio ut felis."
+    },
+    {
+      "name": "Mark Brown",
+      "position": "Developer",
+      "image": "https://via.placeholder.com/150",
+      "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit nibh ut massa scelerisque, vitae blandit turpis mattis. Sed convallis, augue at bibendum tincidunt, justo velit pretium orci, non tristique sapien odio ut felis."
+    },
+    {
+      "name": "Linda Kim",
+      "position": "Designer",
+      "image": "https://via.placeholder.com/150",
+      "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit nibh ut massa scelerisque, vitae blandit turpis mattis. Sed convallis, augue at bibendum tincidunt, justo velit"
+    }
+  ]
