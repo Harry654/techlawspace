@@ -16,6 +16,10 @@ function OurTeam() {
                 <div className="row">
                   <br />
                   <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
 
                   <TeamList teams={teams} />
 
