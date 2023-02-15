@@ -98,15 +98,26 @@ function NavBar({ currentPage }) {
       {isMobile && (
         <>
           <nav className={`navigation__drawer ${isOpen ? "is-open" : ""}`}>
-            <ul>
-              <li>
-                <a href="#">Home</a>
+            <ul className="menu">
+              <li className="menu-item">
+                <Link to="/" style={getPage("home")}>
+                  Home
+                </Link>
               </li>
-              <li>
-                <a href="#">About</a>
+              <li className="menu-item">
+                <Link to="/about" style={getPage("about")}>
+                  About Us
+                </Link>
               </li>
-              <li>
-                <a href="#">Contact</a>
+              <li className="menu-item">
+                <Link to="/our-team" style={getPage("our-team")}>
+                  Our Team
+                </Link>
+              </li>
+              <li className="menu-item">
+                <Link to="/publications" style={getPage("publications")}>
+                  Publications
+                </Link>
               </li>
             </ul>
           </nav>
