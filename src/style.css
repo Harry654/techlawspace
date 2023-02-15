@@ -1031,9 +1031,9 @@ form input[type="submit"]:hover, form input[type="submit"]:active, form input[ty
 
 /* line 39, sass/layout/_header.scss */
 .menu-toggle { background-color: transparent; color: white; padding: 10px 20px; border: none; outline: none; font-size: 20px; font-size: 1.25em; display: none; }
-@media screen and (max-width: 990px) { /* line 39, sass/layout/_header.scss */
+@media screen and (max-width: 768px) { /* line 39, sass/layout/_header.scss */
   .menu-toggle { display: block; } }
-@media screen and (min-width: 991px) { /* line 39, sass/layout/_header.scss */
+@media screen and (min-width: 769px) { /* line 39, sass/layout/_header.scss */
   .menu-toggle { display: none !important; } }
 
 /* line 51, sass/layout/_header.scss */
@@ -1051,9 +1051,9 @@ form input[type="submit"]:hover, form input[type="submit"]:active, form input[ty
 .main-navigation { float: right; }
 /* line 84, sass/layout/_header.scss */
 .main-navigation .menu { list-style: none; margin: 0; padding: 0; }
-@media screen and (min-width: 991px) { /* line 84, sass/layout/_header.scss */
+@media screen and (min-width: 769px) { /* line 84, sass/layout/_header.scss */
   .main-navigation .menu { display: block !important; } }
-@media screen and (max-width: 990px) { /* line 84, sass/layout/_header.scss */
+@media screen and (max-width: 768px) { /* line 84, sass/layout/_header.scss */
   .main-navigation .menu { display: none; } }
 /* line 93, sass/layout/_header.scss */
 .main-navigation .menu-item { display: inline-block; padding: 0 10px; }

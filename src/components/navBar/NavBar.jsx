@@ -20,7 +20,7 @@ function NavBar({ currentPage }) {
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
     const checkWindowSize = () => {
-      setIsMobile(window.innerWidth < 768);
+      setIsMobile(window.innerWidth <= 768);
     };
 
     checkWindowSize();
