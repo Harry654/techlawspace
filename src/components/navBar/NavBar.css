@@ -1,4 +1,48 @@
-.top-margin{
+/* .top-margin{
     height: 110px;
     background-color: red;
-}
+} */
+
+
+.navigation__drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #fff;
+    z-index: 1;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .is-open {
+    transform: translateX(0);
+  }
+  
+  .navigation__drawer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navigation__drawer li {
+    margin: 10px 0;
+  }
+  
+  .navigation__drawer a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #000;
+  }
+  
+  .drawer__toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 2;
+  }
+  
