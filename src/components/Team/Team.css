@@ -14,13 +14,9 @@
 .slick-next{
     margin-right: 25px;
 }
-/* 
-.slick-prev:hover,
-.slick-next:hover {
-    color: red;
-} */
-.slick-slider {
-    margin-right: 0 !important;
-    padding-right: 0 !important;
-  }
-  
+
+@media screen and (max-width: 768px){
+    .slick-prev, .slick-next{
+        visibility: hidden;
+    }
+}

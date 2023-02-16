@@ -9,7 +9,7 @@
   left: 0;
   height: 100%;
   width: 100%;
-  z-index: 3;
+  z-index: 11;
   transform: translateX(-100%);
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);

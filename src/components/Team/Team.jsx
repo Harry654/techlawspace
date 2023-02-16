@@ -17,6 +17,15 @@ const Team = ({ members }) => {
     nextArrow: <IoPlayForwardCircleSharp color="#ffffff"/>,
     responsive: [
       {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: members.length >= 3 ? 3 : members.length,
+          slidesToScroll: 2,
+          centerMode: true,
+          centerPadding: "0px",
+        },
+      },
+      {
         breakpoint: 768,
         settings: {
           slidesToShow: members.length >= 4 ? 4 : members.length,
