@@ -57,9 +57,9 @@ function Home() {
 
   return (
     <>
+        <div className="background">
         <NavBar currentPage="home" />
         
-        <div className="background">
 		
 		<div id="site-content">
 			{/* <div style={{ width: "100%", position: "fixed", zIndex: 10 }}>
@@ -70,10 +70,8 @@ function Home() {
 				
 				<div className="hero" style={{ background: "rgba(0, 0, 0, .7)" }}>
 					<div className="container">
-						<div className="row">
 						<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 
-						</div>
 					</div>
 				</div>
 				

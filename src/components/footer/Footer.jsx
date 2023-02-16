@@ -24,7 +24,7 @@ function Footer() {
                 <a href="!#"><i className="fa fa-phone"></i></a>
             </div>
             <div className="copy">
-                <p>Copyright 2022 Tech Law Space. All rights reserved.</p>
+                <p>Copyright 2023 Tech Law Space. All rights reserved.</p>
             </div>
         </div>
     </footer>

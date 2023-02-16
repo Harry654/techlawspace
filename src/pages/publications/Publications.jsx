@@ -13,9 +13,7 @@ function Publications() {
               
               <div className="hero" style={{ background: "rgba(0, 0, 0, .7)" }}>
                 <div className="container">
-                  <div className="row">
                     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-                  </div>
                 </div>
               </div>
               

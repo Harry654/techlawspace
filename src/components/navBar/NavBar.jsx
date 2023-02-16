@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
 import "./NavBar.css";
+import React, { useState, useEffect } from "react";
 import logo from "../../images/logo.png";
 import { Link } from "react-router-dom";
 
@@ -18,6 +18,7 @@ function NavBar({ currentPage }) {
   };
 
   const [isMobile, setIsMobile] = useState(false);
+  console.log(isMobile, isOpen)
   useEffect(() => {
     const checkWindowSize = () => {
       setIsMobile(window.innerWidth <= 768);
@@ -56,17 +57,15 @@ function NavBar({ currentPage }) {
           </Link>
 
           <nav className="main-navigation">
-            <button
-              type="button"
-              className="menu-toggle"
-              onClick={toggleDrawer}
-            >
-              {!isOpen ? (
+            {isMobile && !isOpen && (
+              <button
+                type="button"
+                className="menu-toggle"
+                onClick={toggleDrawer}
+              >
                 <i className="fa fa-bars"></i>
-              ) : (
-                <i className="fa fa-times"></i>
-              )}
-            </button>
+              </button>
+            )}
             <ul className="menu">
               <li className="menu-item">
                 <Link to="/" style={getPage("home")}>
@@ -98,6 +97,13 @@ function NavBar({ currentPage }) {
       {isMobile && (
         <>
           <nav className={`navigation__drawer ${isOpen ? "is-open" : ""}`}>
+		  <button
+                type="button"
+                className="menu-toggle times"
+                onClick={toggleDrawer}
+              >
+                <i className="fa fa-times"></i>
+              </button>
             <ul className="menu">
               <li className="menu-item">
                 <Link to="/" style={getPage("home")}>
@@ -123,7 +129,6 @@ function NavBar({ currentPage }) {
           </nav>
         </>
       )}
-
     </>
   );
 }

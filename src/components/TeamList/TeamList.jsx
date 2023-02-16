@@ -8,7 +8,7 @@ const TeamList = ({ teams }) => {
       <Zoom>
         <h2 style={{ marginLeft: 30 }}>{teamName} Law</h2>
       </Zoom>
-      <Team members={members} />
+      <Team members={members} /><br/><br/>
     </div>
   ));
 };

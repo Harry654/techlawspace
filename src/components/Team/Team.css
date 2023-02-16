@@ -1,0 +1,26 @@
+.slick-prev,
+.slick-next {
+  width: 50px;
+  height: 50px;
+  background: rgb(80, 80, 250);
+  transition: 0.3s ease-in-out;
+  z-index: 2;
+  position: absolute;
+  border-radius: 50%;
+}
+.slick-prev{
+    margin-left: 25px;
+}
+.slick-next{
+    margin-right: 25px;
+}
+/* 
+.slick-prev:hover,
+.slick-next:hover {
+    color: red;
+} */
+.slick-slider {
+    margin-right: 0 !important;
+    padding-right: 0 !important;
+  }
+  
