@@ -9,6 +9,8 @@ import { Link } from "react-router-dom";
 import { Slide } from "react-awesome-reveal";
 function Home() {
   useEffect(() => {
+    window.scrollTo(0, 0);
+    
     var welcome = document.querySelector("#welcome");
     var latestNews = document.querySelector("#latest-news");
     var latestHeaders = document.getElementsByClassName("latest-header");

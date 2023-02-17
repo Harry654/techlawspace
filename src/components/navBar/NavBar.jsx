@@ -14,16 +14,17 @@ function NavBar({ currentPage }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDrawer = () => {
+    const mode = !isOpen ? "open" : "closed";
     setIsOpen(!isOpen);
-    if (!isOpen) {
-      document.body.classList.add('no-scroll');
-    } else {
-      document.body.classList.remove('no-scroll');
-    }
+    // if (mode === "open") {
+    //   document.body.classList.add("no-scroll");
+    // } else {
+    //   document.body.classList.remove("no-scroll");
+    // }
   };
 
   const [isMobile, setIsMobile] = useState(false);
-  console.log(isMobile, isOpen)
+  console.log(isMobile, isOpen);
   useEffect(() => {
     const checkWindowSize = () => {
       setIsMobile(window.innerWidth <= 768);
@@ -102,13 +103,13 @@ function NavBar({ currentPage }) {
       {isMobile && (
         <>
           <nav className={`navigation__drawer ${isOpen ? "is-open" : ""}`}>
-		  <button
-                type="button"
-                className="menu-toggle times"
-                onClick={toggleDrawer}
-              >
-                <i className="fa fa-times"></i>
-              </button>
+            <button
+              type="button"
+              className="menu-toggle times"
+              onClick={toggleDrawer}
+            >
+              <i className="fa fa-times"></i>
+            </button>
             <ul className="menu">
               <li className="menu-item">
                 <Link to="/" style={getPage("home")}>

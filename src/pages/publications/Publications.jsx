@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import NavBar from '../../components/navBar/NavBar';
 import Footer from '../../components/footer/Footer';
 
 function Publications() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   return (
     <div>
         <NavBar currentPage="publications" />

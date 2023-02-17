@@ -8,6 +8,7 @@ import { Zoom, Slide } from 'react-awesome-reveal';
 
 function About() {
 	useEffect(() => {
+		window.scrollTo(0, 0);
 		
 		// var main = document.querySelector("#main");
 		var mission = document.querySelector("#mission");
