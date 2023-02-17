@@ -28,7 +28,7 @@ function Home() {
                     // latestNews.style.boxShadow = '5px 5px 5px black';
                     // welcome.style.transition = '.10s ease';
                 }else{
-                    welcome.style.background = 'rgba(0, 0, 0, 0.6)';
+                    welcome.style.background = 'rgba(0, 0, 0, 0.7)';
                     latestNews.style.background = 'rgb(80, 80, 250)';
                     for (i = 0; i < latestHeaders.length; i++) {
                         latestHeaders[i].style.color = 'white';
@@ -57,9 +57,9 @@ function Home() {
 
   return (
     <>
-        <div className="background">
         <NavBar currentPage="home" />
         
+        <div className="background">
 		
 		<div id="site-content">
 			{/* <div style={{ width: "100%", position: "fixed", zIndex: 10 }}>
@@ -70,8 +70,10 @@ function Home() {
 				
 				<div className="hero" style={{ background: "rgba(0, 0, 0, .7)" }}>
 					<div className="container">
+						<div className="row">
 						<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 
+						</div>
 					</div>
 				</div>
 				

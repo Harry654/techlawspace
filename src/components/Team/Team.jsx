@@ -7,7 +7,7 @@ import "./Team.css";
 
 const Team = ({ members }) => {
   const settings = {
-    dots: true,
+    // dots: true,
     speed: 500,
     slidesToShow: members.length >= 5 ? 5 : members.length,
     slidesToScroll: 4,

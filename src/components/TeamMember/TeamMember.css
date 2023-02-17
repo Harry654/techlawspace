@@ -11,6 +11,8 @@
 .team-member img {
   width: 150px;
   height: 150px;
+  min-width: 150px;
+  min-height: 150px;
   border-radius: 50%;
   max-width: 100%;
 }
@@ -48,6 +50,8 @@
 }
 
 .modal {
+  /* background-color: red; */
+  min-width: 300px;
   position: absolute;
   top: 50%;
   left: 50%;
