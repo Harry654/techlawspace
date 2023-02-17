@@ -7,12 +7,10 @@ import "./Team.css";
 
 const Team = ({ members }) => {
   const settings = {
-    // dots: true,
+    infinite: false,
     speed: 500,
     slidesToShow: members.length >= 5 ? 5 : members.length,
     slidesToScroll: 4,
-    centerMode: true,
-    centerPadding: "50px",
     prevArrow: <IoPlayBackCircleSharp color="#ffffff"/>,
     nextArrow: <IoPlayForwardCircleSharp color="#ffffff"/>,
     responsive: [
@@ -21,8 +19,6 @@ const Team = ({ members }) => {
         settings: {
           slidesToShow: members.length >= 3 ? 3 : members.length,
           slidesToScroll: 2,
-          centerMode: true,
-          centerPadding: "0px",
         },
       },
       {
@@ -30,8 +26,6 @@ const Team = ({ members }) => {
         settings: {
           slidesToShow: members.length >= 4 ? 4 : members.length,
           slidesToScroll: 3,
-          centerMode: true,
-          centerPadding: "50px",
         },
       },
       {
@@ -39,8 +33,6 @@ const Team = ({ members }) => {
         settings: {
           slidesToShow: members.length >= 3 ? 3 : members.length,
           slidesToScroll: 2,
-          centerMode: true,
-          centerPadding: "50px",
         },
       },
       // show 2 slides
@@ -49,8 +41,6 @@ const Team = ({ members }) => {
         settings: {
           slidesToShow: members.length >= 2 ? 2 : members.length,
           slidesToScroll: 2,
-          centerMode: true,
-          centerPadding: "100px",
         },
       },
       {
@@ -58,8 +48,6 @@ const Team = ({ members }) => {
         settings: {
           slidesToShow: members.length >= 2 ? 2 : members.length,
           slidesToScroll: 2,
-          centerMode: true,
-          centerPadding: "100px",
         },
       },
       {
@@ -67,8 +55,6 @@ const Team = ({ members }) => {
         settings: {
           slidesToShow: members.length >= 2 ? 2 : members.length,
           slidesToScroll: 2,
-          centerMode: true,
-          centerPadding: "70px",
         },
       },
       {
@@ -76,8 +62,6 @@ const Team = ({ members }) => {
         settings: {
           slidesToShow: members.length >= 2 ? 2 : members.length,
           slidesToScroll: 2,
-          centerMode: true,
-          centerPadding: "50px",
         },
       },
       {
@@ -85,8 +69,6 @@ const Team = ({ members }) => {
         settings: {
           slidesToShow: members.length >= 2 ? 2 : members.length,
           slidesToScroll: 2,
-          centerMode: true,
-          centerPadding: "40px",
         },
       },
       // show 1 slide
@@ -94,9 +76,7 @@ const Team = ({ members }) => {
         breakpoint: 300,
         settings: {
           slidesToShow: members.length >= 1 ? 1 : members.length,
-          slidesToScroll: 1,
-          centerMode: true,
-          centerPadding: "70px",
+          slidesToScroll: 1
         },
       },
       {
@@ -104,8 +84,6 @@ const Team = ({ members }) => {
         settings: {
           slidesToShow: members.length >= 1 ? 1 : members.length,
           slidesToScroll: 1,
-          centerMode: true,
-          centerPadding: "50px",
         },
       },
       {
@@ -113,8 +91,6 @@ const Team = ({ members }) => {
         settings: {
           slidesToShow: members.length >= 1 ? 1 : members.length,
           slidesToScroll: 1,
-          centerMode: true,
-          centerPadding: "35px",
         },
       },
     ],
