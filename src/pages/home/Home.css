@@ -1,16 +1,21 @@
-
-
-.person{
-    display: flex;
-    align-items: center;
+.person {
+  display: flex;
+  align-items: center;
 }
 
-.quote-container{
-    width: 100%;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    background-color: #ffffff;
-    padding: 50px;
+.quote-container {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background-color: #ffffff;
+  padding: 50px;
+  padding-top: 0px;
+}
+
+@media screen and (max-width: 1020px) {
+  .quote-container {
+    padding: 20px;
     padding-top: 0px;
+  }
 }
