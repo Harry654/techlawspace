@@ -153,9 +153,11 @@ function Home() {
 
             <div
               className="fullwidth-block"
-              style={{ background: "rgba(255, 255, 255, 1)" }}
-            >
-              <div className="container">
+              style={{ background: "rgba(255, 255, 255, 1)", paddingBottom: 0 }}
+              >
+              <div
+                className="container"
+              >
                 <div className="centralize feature-list-section">
                   <div className="col-md-5">
                     <div className="feature">
@@ -232,7 +234,9 @@ function Home() {
                   </div>
                 </div>
               </div>
+            </div>
 
+            <div className="quote-container">
               <div
                 id="quote-block"
                 className="quote-section transition"

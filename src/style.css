@@ -240,8 +240,8 @@ form input[type="submit"]:hover, form input[type="submit"]:active, form input[ty
 
 /* line 131, sass/libs/_components.scss */
 .quote-section { 
-  margin: 30px 0; 
-  margin-right: 30px;
+  /* margin: 30px 0; 
+  margin-right: 30px; */
   padding: 50px 100px; 
   min-width: 400px;
 }
