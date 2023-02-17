@@ -4,14 +4,14 @@ import mail from "../../images/icon-envelope.png";
 function Footer() {
   return (
     <footer className="site-footer">
-        <div className="container">
+        <div className="" style={{ paddingLeft: 10, paddingRight: 10 }}>
             <div className="subscribe-form" style={{ background: "linear-gradient(to right, #15281C, #256A5C)" }}>
                 <form action="!#">
-                    <label for="!#">
+                    <label for="email">
                         <span style={{ fontSize: "15px" }}>Get notifications of our latest posts sent straight to your inbox</span>
                     </label>
                     <div className="control">
-                        <input type="text" placeholder="Enter your email to subscribe..." />
+                        <input id="email" type="text" placeholder="Enter your email to subscribe..." />
                         <button type="submit"><img src={mail} alt="mail" /></button>
                     </div>
                 </form>
