@@ -16,16 +16,18 @@ function NavBar({ currentPage }) {
   const toggleDrawer = () => {
     const mode = !isOpen ? "open" : "closed";
     setIsOpen(!isOpen);
-    // if (mode === "open") {
-    //   document.body.classList.add("no-scroll");
-    // } else {
-    //   document.body.classList.remove("no-scroll");
-    // }
+    if (mode === "open") {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
   };
 
   const [isMobile, setIsMobile] = useState(false);
   console.log(isMobile, isOpen);
   useEffect(() => {
+    document.body.classList.remove("no-scroll");
+
     const checkWindowSize = () => {
       setIsMobile(window.innerWidth <= 768);
     };
