@@ -15,6 +15,11 @@ function NavBar({ currentPage }) {
 
   const toggleDrawer = () => {
     setIsOpen(!isOpen);
+    if (!isOpen) {
+      document.body.classList.add('no-scroll');
+    } else {
+      document.body.classList.remove('no-scroll');
+    }
   };
 
   const [isMobile, setIsMobile] = useState(false);

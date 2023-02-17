@@ -1171,3 +1171,7 @@ form input[type="submit"]:hover, form input[type="submit"]:active, form input[ty
     flex-direction: column;
   }
 }
+
+.no-scroll {
+  overflow: hidden;
+}
