@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Modal from "react-modal";
 import "./TeamMember.css";
 
-const TeamMember = ({ name, position, image, bio }) => {
+const TeamMember = ({ index, margin, name, position, image, bio }) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const toggleModal = () => {
     const mode = !modalIsOpen ? "open" : "closed";
@@ -13,8 +13,9 @@ const TeamMember = ({ name, position, image, bio }) => {
       document.body.classList.remove("no-scroll");
     }
   }
+  //  className={`${margin && 'margin'}`}
   return (
-    <div>
+    <div style={{ display: "flex", justifyContent: "center", marginLeft: (margin && window.innerWidth <= 768) ? -50*index : 0 }}>
       <div className="team-member" onClick={toggleModal}>
         <img src={require('../../images/bg.jpg')} alt={name} />
         <h3>{name}</h3>
