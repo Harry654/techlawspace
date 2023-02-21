@@ -1,16 +1,78 @@
 /* line 10, sass/libs/bootstrap-grid/_grid.scss */
-.about-container { width: 100%; *zoom: 1; padding: 20px; margin-bottom: -50px;}
+.about-container {
+  width: 100%;
+  *zoom: 1;
+  padding: 20px;
+  margin-bottom: -50px;
+}
 /* line 4, sass/libs/_mixins.scss */
-.about-container:after { content: " "; clear: both; display: block; overflow: hidden; height: 0; }
-@media (min-width: 100%) { /* line 10, sass/libs/bootstrap-grid/_grid.scss */
-  .about-container { width: 100%; } }
-@media (min-width: 992px) { /* line 10, sass/libs/bootstrap-grid/_grid.scss */
-  .about-container { width: 100%; } }
-@media (min-width: 1200px) { /* line 10, sass/libs/bootstrap-grid/_grid.scss */
-  .about-container { width: 100%; } }
-  
+.about-container:after {
+  content: " ";
+  clear: both;
+  display: block;
+  overflow: hidden;
+  height: 0;
+}
+@media (min-width: 100%) {
+  /* line 10, sass/libs/bootstrap-grid/_grid.scss */
+  .about-container {
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  /* line 10, sass/libs/bootstrap-grid/_grid.scss */
+  .about-container {
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 10, sass/libs/bootstrap-grid/_grid.scss */
+  .about-container {
+    width: 100%;
+  }
+}
 
+.about-main-content {
+  background: rgba(0, 0, 0, 0.7);
+}
 
-.about-main-content{
-  background: rgba(0, 0, 0, .6);
+.mission-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.vision-content {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+.mission-text {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.vision-text {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .about_image {
+    display: none;
+  }
+  .mission-content,
+  .vision-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .mission-text, .vision-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }

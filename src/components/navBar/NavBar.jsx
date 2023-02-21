@@ -26,7 +26,7 @@ function NavBar({ currentPage }) {
   const [isMobile, setIsMobile] = useState(false);
   console.log(isMobile, isOpen);
   useEffect(() => {
-    document.body.classList.remove("no-scroll");
+      document.body.classList.remove("no-scroll");
 
     const checkWindowSize = () => {
       setIsMobile(window.innerWidth <= 768);

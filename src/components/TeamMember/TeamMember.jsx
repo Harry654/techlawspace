@@ -12,12 +12,18 @@ const TeamMember = ({ index, margin, name, position, image, bio }) => {
     } else {
       document.body.classList.remove("no-scroll");
     }
-  }
+  };
   //  className={`${margin && 'margin'}`}
   return (
-    <div style={{ display: "flex", justifyContent: "center", marginLeft: (margin && window.innerWidth <= 768) ? -50*index : 0 }}>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        marginLeft: margin && window.innerWidth <= 768 ? -50 * index : 0,
+      }}
+    >
       <div className="team-member" onClick={toggleModal}>
-        <img src={require('../../images/bg.jpg')} alt={name} />
+        <img src={require("../../images/bg.jpg")} alt={name} />
         <h3>{name}</h3>
         <p>{position}</p>
       </div>
@@ -30,9 +36,9 @@ const TeamMember = ({ index, margin, name, position, image, bio }) => {
       >
         <div className="modal-content">
           {/* <button style={{ marginLeft: 'auto' }} onClick={() => setModalIsOpen(false)}>Close</button> */}
-          <img src={require('../../images/bg.jpg')} alt={name} />
+          <img src={require("../../images/bg.jpg")} alt={name} />
           <h2>{name}</h2>
-          <p style={{ textAlign: 'justify' }}>{bio}</p>
+          <p style={{ textAlign: "justify" }}>{bio}</p>
           <p>Member since 2020</p>
         </div>
       </Modal>

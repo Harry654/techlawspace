@@ -11,14 +11,14 @@ function Home() {
   useEffect(() => {
     window.scrollTo(0, 0);
     
-    var welcome = document.querySelector("#welcome");
-    var latestNews = document.querySelector("#latest-news");
-    var latestHeaders = document.getElementsByClassName("latest-header");
-    var quoteBlock = document.querySelector("#quote-block");
+    let welcome = document.querySelector("#welcome");
+    let latestNews = document.querySelector("#latest-news");
+    let latestHeaders = document.getElementsByClassName("latest-header");
+    let quoteBlock = document.querySelector("#quote-block");
     const HALF_PAGE = window.innerHeight / 2;
     window.addEventListener("scroll", function () {
-      var welcome_top_val = welcome.getBoundingClientRect().top;
-      var i;
+      let welcome_top_val = welcome.getBoundingClientRect().top;
+      let i;
       if (welcome_top_val < 200) {
         welcome.style.background = "rgb(80, 80, 250)";
         latestNews.style.background = "rgba(255, 255, 255, 0.95)";
@@ -64,27 +64,7 @@ function Home() {
 			</div> */}
 
           <main className="main-content">
-            <div className="hero" style={{ background: "rgba(0, 0, 0, .7)" }}>
-              <div className="container">
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-              </div>
-            </div>
+            <div className="blank" />
 
             <div id="welcome" className="fullwidth-block welcome">
               <div className="container">
