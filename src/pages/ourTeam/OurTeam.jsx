@@ -8,25 +8,14 @@ function OurTeam() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  
+
   return (
     <>
       <div className="background">
         <NavBar currentPage="our-team" />
         <div id="site-content">
-          <main className="main-content">
-            <div className="hero" style={{ background: "rgba(0, 0, 0, .7)" }}>
-              <div className="container">
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-
-                <TeamList teams={teams} />
-              </div>
-            </div>
+          <main id="main" className="main-content transition">
+            <TeamList teams={teams} />
           </main>
         </div>
       </div>

@@ -29,7 +29,7 @@ function Home() {
         // latestNews.style.boxShadow = '5px 5px 5px black';
         // welcome.style.transition = '.10s ease';
       } else {
-        welcome.style.background = "rgba(0, 0, 0, 0.7)";
+        welcome.style.background = "";
         latestNews.style.background = "rgb(80, 80, 250)";
         for (i = 0; i < latestHeaders.length; i++) {
           latestHeaders[i].style.color = "white";

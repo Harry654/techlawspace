@@ -81,7 +81,6 @@ function About() {
 
           <div className="fullwidth-block content">
             <div className="about-container transition">
-              {/* <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />  */}
               <Slide direction="right">
                 <div
                   id="mission"

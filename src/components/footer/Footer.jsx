@@ -4,7 +4,7 @@ import mail from "../../images/icon-envelope.png";
 function Footer() {
   return (
     <footer className="site-footer">
-        <div style={{ paddingLeft: 10, paddingRight: 10 }}>
+        <div style={{ paddingLeft: 20, paddingRight: 20 }}>
             <div className="subscribe-form" style={{ background: "linear-gradient(to right, #15281C, #256A5C)" }}>
                 <form action="!#">
                     <label for="email">
