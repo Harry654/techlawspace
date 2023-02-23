@@ -23,10 +23,10 @@ function About() {
     // vision.style.background = 'rgba(80, 80, 250, 0.8)';
 
     window.addEventListener("scroll", function () {
-      // alert(mission)
       var mission_top_val = mission.getBoundingClientRect().top;
       var vision_top_val = vision.getBoundingClientRect().top;
-      if (mission_top_val < 200) {
+      // alert(mission_top_val)
+      if (mission_top_val < 120) {
         // focus on mission
         // mission.style.borderColor = 'rgba(80, 80, 250, 0.8)';
         mission.style.boxShadow = "rgba(0, 0, 0, 0.65) 0px 5px 50px";
@@ -72,7 +72,7 @@ function About() {
 			</div> */}
 
         <main id="main" className="main-content transition">
-          <div className="blank" />
+          {/* <div className="blank" /> */}
 
           <div className="fullwidth-block content">
             <div className="about-container transition">
