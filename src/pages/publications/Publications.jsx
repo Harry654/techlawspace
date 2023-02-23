@@ -16,14 +16,14 @@ function Publications() {
         <div id="site-content">
           <main className="main-content">
             <SearchBar />
-            {/* <ArticleCard
+            <ArticleCard
               article={{
                 thumbnail: "../../images/bg.jpg",
                 title: "A new day",
                 date: "21-02-2023",
               }}
-            /> */}
-            <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
+            />
+            {/* <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> */}
           </main>
         </div>
       </div>

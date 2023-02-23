@@ -16,6 +16,9 @@
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   background-color: #ffffff;
 }
+.box:focus-within {
+  border-radius: 10px;
+}
 .box:hover .input, .box:hover i {
   color: #000000;
 }
