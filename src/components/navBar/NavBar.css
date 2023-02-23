@@ -2,7 +2,7 @@
   height: 110px;
   background-color: red;
 }
-@media screen and (max-width: 1020px) {
+@media screen and (max-height: 580px) {
   .top-margin {
     height: 0px;
   }
