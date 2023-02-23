@@ -37,7 +37,6 @@ function About() {
         // vision.style.borderColor = 'transparent';
         vision.style.boxShadow = "0px 0px 0px black";
         visionTitle.style.color = "#ffffff";
-
       } else {
         // drop focus
         mission.style.background = "";
@@ -45,12 +44,10 @@ function About() {
         mission.style.boxShadow = "0px 0px 0px black";
         missionTitle.style.color = "#ffffff";
 
-
         vision.style.background = "";
         // vision.style.borderColor = 'transparent';
         vision.style.boxShadow = "0px 0px 0px black";
         visionTitle.style.color = "#ffffff";
-
       }
 
       if (vision_top_val < HALF_PAGE) {
@@ -60,12 +57,10 @@ function About() {
         vision.style.background = "rgba(255, 255, 255, 0.8)";
         visionTitle.style.color = "#000000";
 
-
         mission.style.background = "";
         // mission.style.borderColor = 'transparent';
         mission.style.boxShadow = "0px 0px 0px black";
         missionTitle.style.color = "#ffffff";
-
       }
     });
   });
@@ -84,7 +79,7 @@ function About() {
               <Slide direction="right">
                 <div
                   id="mission"
-                  style={{ padding: "50px" }}
+                  style={{ padding: "20px" }}
                   className="mission-content transition"
                 >
                   <img
@@ -93,11 +88,13 @@ function About() {
                     alt="mission"
                     className="about_image"
                   />
-                  <div
-                    className="mission-text"
-                  >
+                  <div className="mission-text">
                     <Zoom>
-                      <h2 id="mission-title" className="entry-title" style={{ color: "black" }}>
+                      <h2
+                        id="mission-title"
+                        className="entry-title"
+                        style={{ color: "#ffffff" }}
+                      >
                         Who we are
                       </h2>
                     </Zoom>
@@ -132,7 +129,7 @@ function About() {
               <Slide>
                 <div
                   id="vision"
-                  style={{ padding: "50px" }}
+                  style={{ padding: "20px" }}
                   className="vision-content transition"
                 >
                   <img
@@ -143,7 +140,11 @@ function About() {
                   />
                   <div className="vision-text">
                     <Zoom>
-                      <h2 id="vision-title" className="entry-title" style={{ color: "black" }}>
+                      <h2
+                        id="vision-title"
+                        className="entry-title"
+                        style={{ color: "#ffffff" }}
+                      >
                         What we do
                       </h2>
                     </Zoom>

@@ -19,7 +19,7 @@ function NavBar({ currentPage }) {
   const [isMobile, setIsMobile] = useState(false);
   console.log(isMobile, isOpen);
   useEffect(() => {
-      document.body.classList.remove("no-scroll");
+    document.body.classList.remove("no-scroll");
 
     const checkWindowSize = () => {
       setIsMobile(window.innerWidth <= 768);
@@ -37,12 +37,11 @@ function NavBar({ currentPage }) {
     if (test === currentPage) return { borderBottom: "3px solid #ac8074" };
     return {};
   }
-  //   return <NavigationDrawer />
   return (
     <>
       <header className="site-header navbar">
         <div className="container">
-          <Link to="/" id="branding">
+          <Link to="/" id="branding" className="branding">
             <img
               src={logo}
               alt="Tech Law Space logo"
