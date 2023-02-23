@@ -3,13 +3,6 @@ import React, { useState, useEffect } from "react";
 import logo from "../../images/logo.png";
 import { Link } from "react-router-dom";
 
-// const NavigationDrawer = () => {
-
-// 	return (
-
-//   );
-// };
-
 function NavBar({ currentPage }) {
   const [isOpen, setIsOpen] = useState(false);
 
