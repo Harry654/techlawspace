@@ -3,7 +3,7 @@ import "./SearchBar.css";
 
 const SearchBar = () => {
   return (
-    <div className="search-container">
+    <div className="search-container transition">
       <div className="box transition">
         <input type="text" className="input" name="txt" placeholder="search..." />
         <i className="fa fa-search"></i>
