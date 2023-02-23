@@ -3,7 +3,6 @@ import NavBar from "../../components/navBar/NavBar";
 import Footer from "../../components/footer/Footer";
 import SearchBar from "../../components/searchBar/SearchBar";
 import ArticleList from "../../components/articleList/ArticleList";
-import { Fragment } from "react";
 
 function Publications() {
   useEffect(() => {
