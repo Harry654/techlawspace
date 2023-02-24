@@ -6,6 +6,7 @@ import About from './pages/about/About';
 import OurTeam from './pages/ourTeam/OurTeam';
 import Publications from './pages/publications/Publications';
 import Article from './pages/article/Article';
+import AdminLogin from './pages/adminLogin/AdminLogin';
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
         <Route exact path="/our-team" key={3} element={ <OurTeam /> }></Route>
         <Route exact path="/publications" key={4} element={ <Publications /> }></Route>
         <Route exact path="/articles/:slug" key={5} element={ <Article /> }></Route>
-        <Route exact path="*" key={6} element={ <h1>Page not found</h1> }></Route>
+        <Route exact path="/admin/login" key={6} element={ <AdminLogin /> }></Route>
+        <Route exact path="*" key={7} element={ <h1>Page not found</h1> }></Route>
       </Routes>
     </Router>
   );

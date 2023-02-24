@@ -24,7 +24,7 @@
 .box:focus-within .input, .box:focus-within i {
   color: #000000;
 }
-.input {
+.box .input {
   color: #ffffff;
   width: 90%;
   height: 100%;
