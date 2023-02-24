@@ -11,7 +11,7 @@ function Footer() {
                         <span style={{ fontSize: "15px" }}>Get notifications of our latest posts sent straight to your inbox</span>
                     </label>
                     <div className="control">
-                        <input id="email" type="text" placeholder="Enter your email to subscribe..." />
+                        <input id="email" type="text" placeholder="Enter your email to subscribe..." disabled />
                         <button type="submit"><img src={mail} alt="mail" /></button>
                     </div>
                 </form>

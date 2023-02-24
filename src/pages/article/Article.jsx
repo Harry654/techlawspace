@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ArticleCard from "../../components/articleCard/ArticleCard";
 import ShareButton from "../../components/shareButton/ShareButton";
+import NavBar from "../../components/navBar/NavBar";
+import Footer from "../../components/footer/Footer";
 import "./Article.css";
 
 const Article = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const { slug } = useParams();
 
   // Function to convert the content from the database to HTML
@@ -21,6 +26,54 @@ const Article = () => {
       <p>Ut dictum dapibus arcu, vel tristique sapien faucibus ac. Donec dapibus ex ipsum, eget euismod quam bibendum nec. Integer laoreet commodo sapien. Sed sed orci turpis. Ut facilisis lectus id justo maximus dapibus. Nullam varius nulla sed mi laoreet, at iaculis enim auctor. Vestibulum tincidunt in tellus vitae posuere. Sed bibendum ultrices odio, eu tempor lorem dignissim vel. In rhoncus nisl a nisi egestas, eget suscipit odio semper.</p>
     `,
     relatedNews: [
+      {
+        id: 2,
+        title: "Another Article",
+        author: "John Smith",
+        date: "January 2, 2022",
+        time: "1:00 PM EST",
+        thumbnail: "https://example.com/thumbnail.jpg",
+      },
+      {
+        id: 3,
+        title: "Third Article",
+        author: "Alice Jones",
+        date: "January 3, 2022",
+        time: "2:00 PM EST",
+        thumbnail: "https://example.com/thumbnail.jpg",
+      },
+      {
+        id: 2,
+        title: "Another Article",
+        author: "John Smith",
+        date: "January 2, 2022",
+        time: "1:00 PM EST",
+        thumbnail: "https://example.com/thumbnail.jpg",
+      },
+      {
+        id: 3,
+        title: "Third Article",
+        author: "Alice Jones",
+        date: "January 3, 2022",
+        time: "2:00 PM EST",
+        thumbnail: "https://example.com/thumbnail.jpg",
+      },
+      {
+        id: 2,
+        title: "Another Article",
+        author: "John Smith",
+        date: "January 2, 2022",
+        time: "1:00 PM EST",
+        thumbnail: "https://example.com/thumbnail.jpg",
+      },
+      {
+        id: 3,
+        title: "Third Article",
+        author: "Alice Jones",
+        date: "January 3, 2022",
+        time: "2:00 PM EST",
+        thumbnail: "https://example.com/thumbnail.jpg",
+      },
       {
         id: 2,
         title: "Another Article",
@@ -62,69 +115,65 @@ const Article = () => {
     return { __html: article.content };
   };
   return (
-    <div className="article-page">
-      <h1>
-        {article.title} {slug}
-      </h1>
-      <div className="article-meta">
-        <p>{article.author}</p>
-        <p>
-          {article.date} {article.time}
-        </p>
-        <div className="share">
-          <ShareButton platform="whatsapp" />
-          <ShareButton platform="twitter" />
+    <>
+      <NavBar />
+      <div className="article-page">
+        <div className="article-page-inner">
+          <h1>
+            {article.title} {slug} {" - This is a test article"}
+          </h1>
+          <div className="article-meta">
+            <p>By {article.author}</p>
+            <p>
+              {article.date} {article.time}
+            </p>
+            <div className="share">
+              <ShareButton platform="whatsapp" />
+              <ShareButton platform="twitter" />
+            </div>
+          </div>
+          <img
+            src="https://picsum.photos/960/500"
+            alt={article.title}
+            className="thumbnail"
+          />
+          <div dangerouslySetInnerHTML={createMarkup()} className="content" />
+        </div>
+        <div className="related-news">
+          <h2>Next up in Tech News</h2>
+          <div className="news-group">
+            {article.relatedNews.map((article, index) => (
+              <ArticleCard
+                key={index}
+                // index={index}
+                article={{
+                  thumbnail: "../../images/bg.jpg",
+                  title: "A new day",
+                  date: "21-02-2023",
+                }}
+              />
+            ))}
+          </div>
+        </div>
+        <div className="latest-news">
+          <h2>Latest News</h2>
+          <div className="news-group">
+            {article.recommendedNews.map((article, index) => (
+              <ArticleCard
+                key={index}
+                index={index}
+                article={{
+                  thumbnail: "../../images/bg.jpg",
+                  title: "A new day",
+                  date: "21-02-2023",
+                }}
+              />
+            ))}
+          </div>
         </div>
       </div>
-      <img
-        src="https://picsum.photos/960/500"
-        alt={article.title}
-        className="thumbnail"
-      />
-      <div dangerouslySetInnerHTML={createMarkup()} className="content" />
-      <div className="related-news">
-        <h2>Next up in Tech News</h2>
-        <div className="news-group">
-          {article.relatedNews.map(({ thumbnail, title, date }) => (
-            <ArticleCard
-              article={{
-                thumbnail: "../../images/bg.jpg",
-                title: "A new day",
-                date: "21-02-2023",
-              }}
-            />
-          ))}
-        </div>
-      </div>
-      <div className="recommended-news">
-        <h2>Recommended News</h2>
-        <div className="news-group">
-          {article.recommendedNews.map(({ thumbnail, title, date }) => (
-            <ArticleCard
-              article={{
-                thumbnail: "../../images/bg.jpg",
-                title: "A new day",
-                date: "21-02-2023",
-              }}
-            />
-          ))}
-        </div>
-      </div>
-      <div className="latest-news">
-        <h2>Latest News</h2>
-        <div className="news-group">
-          {article.recommendedNews.map(({ thumbnail, title, date }) => (
-            <ArticleCard
-              article={{
-                thumbnail: "../../images/bg.jpg",
-                title: "A new day",
-                date: "21-02-2023",
-              }}
-            />
-          ))}
-        </div>
-      </div>
-    </div>
+      <Footer />
+    </>
   );
 };
 

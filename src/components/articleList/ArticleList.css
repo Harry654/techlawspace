@@ -9,12 +9,6 @@
     /* flex-wrap: wrap;
     justify-content: center;
     gap: 30px; */
-    /* background-color: blue; */
+    background-color: #fff;
+    /* margin-top: 20px; */
 }
-
-/* @media screen and (max-width: 768px) {
-    .articles {
-        grid-template-columns: 25% 25% 25%;
-column-gap: 50px;
-    }
-} */

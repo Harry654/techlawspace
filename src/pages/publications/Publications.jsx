@@ -16,7 +16,6 @@ function Publications() {
           <main className="main-content">
             <SearchBar />
             <ArticleList />
-            {/* <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> */}
           </main>
         </div>
       </div>

@@ -12,7 +12,7 @@ function Home() {
     window.scrollTo(0, 0);
     
     let welcome = document.querySelector("#welcome");
-    let latestNews = document.querySelector("#latest-news");
+    let latestNews = document.querySelector("#home-latest-news");
     let latestHeaders = document.getElementsByClassName("latest-header");
     let quoteBlock = document.querySelector("#quote-block");
     const HALF_PAGE = window.innerHeight / 2;
@@ -72,6 +72,7 @@ function Home() {
                   <div className="col-md-8">
                     <Slide>
                       <Link to="/articles/987">Article</Link>
+                      <Link to="/admin/login">Admin Login</Link>
                       <h2>Welcome to the space!</h2>
                       <p className="welcome-content">
                         Lorem ipsum dolor sit amet, consectetur adipisicing
@@ -88,8 +89,8 @@ function Home() {
                   <div className="col-md-4">
                     <Slide direction="right">
                       <div
-                        id="latest-news"
-                        className="latest-news transition"
+                        id="home-latest-news"
+                        className="home-latest-news transition"
                         style={{
                           background: "rgb(80, 80, 250)",
                           borderRadius: "15px",

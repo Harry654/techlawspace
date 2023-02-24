@@ -12,13 +12,13 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route exact path="/" key={1} element={ <Home /> }></Route>
-        <Route exact path="/about" key={2} element={ <About /> }></Route>
-        <Route exact path="/our-team" key={3} element={ <OurTeam /> }></Route>
-        <Route exact path="/publications" key={4} element={ <Publications /> }></Route>
-        <Route exact path="/articles/:slug" key={5} element={ <Article /> }></Route>
-        <Route exact path="/admin/login" key={6} element={ <AdminLogin /> }></Route>
-        <Route exact path="*" key={7} element={ <h1>Page not found</h1> }></Route>
+        <Route exact path="/" element={ <Home /> }></Route>
+        <Route exact path="/about" element={ <About /> }></Route>
+        <Route exact path="/our-team" element={ <OurTeam /> }></Route>
+        <Route exact path="/publications" element={ <Publications /> }></Route>
+        <Route exact path="/articles/:slug" element={ <Article /> }></Route>
+        <Route exact path="/admin/login" element={ <AdminLogin /> }></Route>
+        <Route exact path="*" element={ <h1>Page not found</h1> }></Route>
       </Routes>
     </Router>
   );

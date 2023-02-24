@@ -464,33 +464,33 @@ form input[type="submit"]:focus {
   color: rgba(255, 255, 255, 0.85);
 }
 /* line 35, sass/libs/_components.scss */
-.latest-news {
+.home-latest-news {
   border: 2px solid #28292c;
   padding: 30px;
   box-shadow: 5px 5px 5px #111113;
 }
 /* line 39, sass/libs/_components.scss */
-.latest-news h3 {
+.home-latest-news h3 {
   font-size: 14px;
   font-size: 0.875em;
 }
 /* line 43, sass/libs/_components.scss */
-.latest-news ul {
+.home-latest-news ul {
   list-style: none;
   padding-left: 0;
   margin: 0;
 }
 /* line 48, sass/libs/_components.scss */
-.latest-news ul li {
+.home-latest-news ul li {
   border-bottom: 1px solid #28292c;
   padding: 10px 0;
 }
 /* line 52, sass/libs/_components.scss */
-.latest-news ul li:last-child {
+.home-latest-news ul li:last-child {
   border-bottom: none;
 }
 /* line 55, sass/libs/_components.scss */
-.latest-news .tn-title {
+.home-latest-news .tn-title {
   font-size: 16px;
   font-size: 1em;
   font-family: Arial, sans-serif;
@@ -498,17 +498,17 @@ form input[type="submit"]:focus {
   margin-bottom: 0;
 }
 /* line 60, sass/libs/_components.scss */
-.latest-news .tn-title a {
+.home-latest-news .tn-title a {
   color: white;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
 /* line 64, sass/libs/_components.scss */
-.latest-news .tn-title a:hover {
+.home-latest-news .tn-title a:hover {
   color: white;
 }
 /* line 69, sass/libs/_components.scss */
-.latest-news .date {
+.home-latest-news .date {
   font-size: 14px;
   font-size: 0.875em;
 }
