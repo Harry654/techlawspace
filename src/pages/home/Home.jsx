@@ -71,6 +71,7 @@ function Home() {
                 <div className="centralize">
                   <div className="col-md-8">
                     <Slide>
+                      <Link to="/articles/987">Article</Link>
                       <h2>Welcome to the space!</h2>
                       <p className="welcome-content">
                         Lorem ipsum dolor sit amet, consectetur adipisicing
