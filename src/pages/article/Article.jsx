@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import ArticleCard from "../../components/articleCard/ArticleCard";
+import ShareButton from "../../components/shareButton/ShareButton";
 import "./Article.css";
 
 const Article = () => {
@@ -70,7 +71,7 @@ const Article = () => {
         <p>
           {article.date} {article.time}
         </p>
-        <a href={article.shareUrl}>Share</a>
+        <ShareButton />
       </div>
       <img src="https://picsum.photos/960/500" alt={article.title} className="thumbnail" />
       <div dangerouslySetInnerHTML={createMarkup()} className="content" />
