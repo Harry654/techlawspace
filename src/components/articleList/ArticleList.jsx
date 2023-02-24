@@ -5,7 +5,7 @@ import ArticleCard from "../articleCard/ArticleCard";
 const ArticleList = ({ article }) => {
   return (
     <div className="articles">
-      {[1, 2, 3, 4, 5,6,7,8,9,10].map((item, index) => (
+      {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item, index) => (
         <ArticleCard
           key={index}
           index={index}

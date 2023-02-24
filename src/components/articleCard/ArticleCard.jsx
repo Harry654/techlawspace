@@ -5,8 +5,8 @@ const ArticleCard = ({ article, index }) => {
   return (
     <div className={`card ${index === 0 ? "first" : ""}`}>
       <img
-        src={"https://picsum.photos/200/"}
-        className="card-img-top"
+        src={"https://picsum.photos/1000/"}
+        className="card-img-top transition"
         alt={article.title}
       />
       <div className="card-body">
@@ -15,7 +15,7 @@ const ArticleCard = ({ article, index }) => {
         <p className="card-text">
          {" Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor".repeat(10)}
         </p>
-        <p className="card-date">{article.date}</p>
+        <p className="card-date">{"By John Doe"} | {article.date}</p>
       </div>
     </div>
   );
