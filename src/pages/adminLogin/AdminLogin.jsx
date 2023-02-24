@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import "./AdminLogin.css";
 
 function AdminLogin() {
-  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
+  const handleUsernameChange = (e) => {
+    setUsername(e.target.value);
   };
 
   const handlePasswordChange = (e) => {
@@ -21,15 +21,15 @@ function AdminLogin() {
     <div className="background full">
       <main className="main-content">
         <div className="login-box transition">
-          <h1>Login</h1>
+          <h1>Admin Login</h1>
           <form onSubmit={handleSubmit}>
             <div className="form-group">
-              <label htmlFor="email">Email</label>
+              <label htmlFor="username">Username</label>
               <input
-                type="email"
-                id="email"
-                value={email}
-                onChange={handleEmailChange}
+                type="text"
+                id="username"
+                value={username}
+                onChange={handleUsernameChange}
               />
             </div>
             <div className="form-group">

@@ -15,8 +15,10 @@
 }
 
 .full .main-content .login-box {
-  width: 70%;  
+  width: 70%;
+  height: 70vh;
   max-width: 500px;
+  max-height: 500px;
   border-radius: 10px;
   padding: 20px;
   animation: zoom-animation 0.3s ease-out;
@@ -25,11 +27,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 70vh;
 }
 
 .full .main-content .login-box:hover {
-  /* background-color: #ffffff; */
   transform: translateY(-5px);
 }
 
@@ -42,11 +42,11 @@
   }
 }
 
-h1 {
+.login-box h1 {
   margin-bottom: 1rem;
 }
 
-form {
+.login-box form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -59,23 +59,26 @@ form {
   margin-bottom: 1rem;
 }
 
-label {
+.login-box form label {
   display: block;
   margin-bottom: 0.5rem;
 }
 
-.form-group input[type="email"],
-.form-group input[type="password"] {
-  width: 100%;
-  padding: 0.5rem;
-  font-size: 1rem;
-  border: none;
-  border-radius: 0.25rem;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
-  text-transform: none;
+.login-box .form-group input[type="text"],
+.login-box .form-group input[type="password"] {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ffffff;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+    text-transform: none;
+    outline: none;
+    background-color: #ffffff;
+    color: #000000;
 }
 
-button[type="submit"] {
+.login-box form button[type="submit"] {
   padding: 0.5rem;
   font-size: 1rem;
   background-color: #007bff;
@@ -87,6 +90,6 @@ button[type="submit"] {
   transition: background-color 0.2s ease;
 }
 
-button[type="submit"]:hover {
+.login-box form button[type="submit"]:hover {
   background-color: #0069d9;
 }
