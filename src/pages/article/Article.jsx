@@ -71,51 +71,58 @@ const Article = () => {
         <p>
           {article.date} {article.time}
         </p>
-        <ShareButton />
+        <div className="share">
+          <ShareButton platform="whatsapp" />
+          <ShareButton platform="twitter" />
+        </div>
       </div>
-      <img src="https://picsum.photos/960/500" alt={article.title} className="thumbnail" />
+      <img
+        src="https://picsum.photos/960/500"
+        alt={article.title}
+        className="thumbnail"
+      />
       <div dangerouslySetInnerHTML={createMarkup()} className="content" />
       <div className="related-news">
         <h2>Next up in Tech News</h2>
         <div className="news-group">
-        {article.relatedNews.map(({ thumbnail, title, date }) => (
+          {article.relatedNews.map(({ thumbnail, title, date }) => (
             <ArticleCard
-            article={{
+              article={{
                 thumbnail: "../../images/bg.jpg",
                 title: "A new day",
                 date: "21-02-2023",
-            }}
+              }}
             />
-            ))}
-            </div>
+          ))}
+        </div>
       </div>
       <div className="recommended-news">
         <h2>Recommended News</h2>
         <div className="news-group">
-        {article.recommendedNews.map(({ thumbnail, title, date }) => (
+          {article.recommendedNews.map(({ thumbnail, title, date }) => (
             <ArticleCard
-            article={{
+              article={{
                 thumbnail: "../../images/bg.jpg",
                 title: "A new day",
                 date: "21-02-2023",
-            }}
+              }}
             />
-            ))}
-            </div>
+          ))}
+        </div>
       </div>
       <div className="latest-news">
         <h2>Latest News</h2>
         <div className="news-group">
-        {article.recommendedNews.map(({ thumbnail, title, date }) => (
+          {article.recommendedNews.map(({ thumbnail, title, date }) => (
             <ArticleCard
-            article={{
+              article={{
                 thumbnail: "../../images/bg.jpg",
                 title: "A new day",
                 date: "21-02-2023",
-            }}
+              }}
             />
-            ))}
-            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

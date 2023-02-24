@@ -14,6 +14,10 @@
 .article-meta p {
   margin: 0;
 }
+.share {
+    display: flex;
+    gap: 10px;
+}
 .thumbnail {
     width: 100%;
     object-fit: contain;
