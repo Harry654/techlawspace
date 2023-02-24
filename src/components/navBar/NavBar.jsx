@@ -17,7 +17,6 @@ function NavBar({ currentPage }) {
   };
 
   const [isMobile, setIsMobile] = useState(false);
-  console.log(isMobile, isOpen);
   useEffect(() => {
     document.body.classList.remove("no-scroll");
 

@@ -1,6 +1,5 @@
 .top-margin {
   height: 110px;
-  background-color: red;
 }
 @media screen and (max-height: 580px) {
   .top-margin {
