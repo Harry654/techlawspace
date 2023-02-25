@@ -1,5 +1,4 @@
 import { Editor, Transforms,Element as SlateElement} from 'slate'
-import {useSlateStatic} from 'slate-react'
 import Link from'../Elements/Link/Link'
 import Image from '../Elements/Embed/Image'
 import Video from '../Elements/Embed/Video'

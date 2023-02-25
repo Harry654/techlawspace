@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useSelected, useFocused } from "slate-react";
 import Icon from '../../common/Icon'
 import useResize from '../../utils/customHooks/useResize.js'

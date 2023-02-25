@@ -1,4 +1,4 @@
-import {Range, Editor, Transforms} from 'slate';
+import { Transforms } from 'slate';
 import React, {useRef, useState} from 'react';
 import Button from '../../common/Button'
 import Icon from '../../common/Icon'

@@ -1,5 +1,4 @@
 import React from 'react';
-import { useFocused, useSelected, useSlateStatic } from 'slate-react'
 import { InlineMath, BlockMath } from 'react-katex';
 
 import './styles.css'

@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import useContextMenu from '../../utils/customHooks/useContextMenu.js';
 import Icon from '../../common/Icon'
-import { Transforms, Editor, Element, Node, Path } from 'slate';
-import { ReactEditor } from 'slate-react';
+import { Transforms, Path } from 'slate';
 
 
 const HtmlContextMenu = (props) => {

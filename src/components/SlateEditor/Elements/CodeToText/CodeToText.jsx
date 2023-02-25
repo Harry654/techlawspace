@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import './CodeToText.css'
 import Icon from '../../common/Icon'
 import Interweave from 'interweave'
@@ -11,23 +11,25 @@ const CodeToText = (props)=>{
     const wrapperRef = useRef();
 
     const editor = useSlateStatic();
-    const checkClick = (e)=>{
-        const clickedComponent = e.target;
-            if(wrapperRef?.current?.contains(clickedComponent)&& !codeToTextRef?.current?.contains(clickedComponent)){
-                let partialState = {
-                    showInput:false
-                }
-                if(html){
-                    partialState.html = action === 'update' ? '' : html 
-                }
-                handleCodeToText(partialState);
-            }
-    }
     useEffect(()=>{
+        const checkClick = (e)=>{
+            const clickedComponent = e.target;
+                if(wrapperRef?.current?.contains(clickedComponent)&& !codeToTextRef?.current?.contains(clickedComponent)){
+                    let partialState = {
+                        showInput:false
+                    }
+                    if(html){
+                        partialState.html = action === 'update' ? '' : html 
+                    }
+                    handleCodeToText(partialState);
+                }
+        }
+
         document.addEventListener('click',checkClick);
         return ()=>{
             document.removeEventListener('click',checkClick);
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
 
     const codeOnChange = async(e)=>{
