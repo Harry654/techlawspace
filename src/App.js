@@ -7,6 +7,7 @@ import OurTeam from './pages/ourTeam/OurTeam';
 import Publications from './pages/publications/Publications';
 import Article from './pages/article/Article';
 import AdminLogin from './pages/adminLogin/AdminLogin';
+import Dashboard from './pages/dashboard/Dashboard';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route exact path="/publications" element={ <Publications /> }></Route>
         <Route exact path="/articles/:slug" element={ <Article /> }></Route>
         <Route exact path="/admin/login" element={ <AdminLogin /> }></Route>
+        <Route exact path="/admin" element={ <Dashboard /> }></Route>
         <Route exact path="*" element={ <h1>Page not found</h1> }></Route>
       </Routes>
     </Router>

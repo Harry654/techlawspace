@@ -138,6 +138,7 @@ const Article = () => {
             className="thumbnail"
           />
           <div dangerouslySetInnerHTML={createMarkup()} className="content" />
+          <p>This article was written by <strong>{article.author}</strong>. He is a Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra urna in felis rutrum ullamcorper.</p>
         </div>
         <div className="related-news">
           <h2>Next up in Tech News</h2>
