@@ -1,13 +1,43 @@
 .dashboard {
-    width: 100%;
-    /* height: 100vh; */
-    padding: 0 20px;
-    overflow: scroll;
-    background-color: #fff;
+  width: 100%;
+  /* height: 100vh; */
+  padding: 0 20px;
+  overflow: scroll;
+  background-color: #fff;
+}
+.dashboard::-webkit-scrollbar {
+  display: none;
 }
 .dashboard-inner {
+  width: 100%;
+  max-width: 800px;
+  background: #000;
+  margin: 0 auto;
+}
+
+.upload-article {
     width: 100%;
-    max-width: 800px;
-    /* background: #000; */
-    margin: 0 auto;
+  background-color: yellow;
+  height: fit-content;
+}
+.upload-header {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 0 10px;
+  cursor: pointer;
+}
+.upload-header h2 {
+    color: #000;
+}
+.upload-section {
+    max-height: 50px;
+    transition: all 1s ease-in-out;
+}
+
+.upload-section:focus-within {
+    max-height: 1000px;
 }

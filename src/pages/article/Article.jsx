@@ -7,10 +7,23 @@ import Footer from "../../components/footer/Footer";
 import "./Article.css";
 
 const Article = () => {
+
+  useEffect(() => {
+    let link = document.querySelector("link[rel~='icon']");
+    if (!link) {
+      link = document.createElement('link');
+      link.rel = 'icon';
+      document.getElementsByTagName('head')[0].appendChild(link);
+    }
+    link.href = 'https://picsum.photos/200';
+  }, []);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   const { slug } = useParams();
+
+
 
   // Function to convert the content from the database to HTML
 
