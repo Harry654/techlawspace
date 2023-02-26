@@ -119,9 +119,9 @@ const Article = () => {
       <NavBar />
       <div className="article-page">
         <div className="article-page-inner">
-          <h1>
+          <h2>
             {article.title} {slug} {" - This is a test article"}
-          </h1>
+          </h2>
           <div className="article-meta">
             <p>By {article.author}</p>
             <p>
@@ -133,7 +133,7 @@ const Article = () => {
             </div>
           </div>
           <img
-            src="https://picsum.photos/960/500"
+            src="https://picsum.photos/1000/1000"
             alt={article.title}
             className="thumbnail"
           />

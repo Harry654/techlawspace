@@ -84,9 +84,9 @@ function About() {
                 >
                   <img
                     src={law1}
-                    style={{ width: "30%", borderRadius: "10px" }}
+                    style={{ width: "30%", height: "100%", borderRadius: "10px" }}
                     alt="mission"
-                    className="about_image"
+                    className="about-image"
                   />
                   <div className="mission-text">
                     <Zoom>
@@ -134,9 +134,9 @@ function About() {
                 >
                   <img
                     src={law2}
-                    style={{ width: "30%", borderRadius: "10px" }}
+                    style={{ width: "30%", height: "100%", borderRadius: "10px" }}
                     alt="vision"
-                    className="about_image"
+                    className="about-image"
                   />
                   <div className="vision-text">
                     <Zoom>

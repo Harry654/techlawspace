@@ -6,7 +6,7 @@ import Equation from '../Elements/Equation/Equation'
 import HtmlCode from '../Elements/CodeToText/HtmlCode'
 import Table from '../Elements/Table/Table'
 
-const alignment = ['alignLeft','alignRight','alignCenter']
+const alignment = ['alignLeft','alignRight','alignCenter', 'justify']
 const list_types = ['orderedList','unorderedList']
 
 
@@ -157,19 +157,21 @@ export const getBlock = (props) => {
 
     switch(element.type){
         case 'headingOne':
-            return <h1 {...attributes} {...element.attr}>{children}</h1>
+            return <h1 style={{color: "black", textTransform: "none"}} {...attributes} {...element.attr}>{children}</h1>
         case 'headingTwo':
-            return <h2 {...attributes} {...element.attr}>{children}</h2>
+            return <h2 style={{color: "black", textTransform: "none"}} {...attributes} {...element.attr}>{children}</h2>
         case 'headingThree':
-            return <h3 {...attributes} {...element.attr}>{children}</h3>
+            return <h3 style={{color: "black", textTransform: "none"}} {...attributes} {...element.attr}>{children}</h3>
         case 'blockquote':
             return <blockquote {...attributes} {...element.attr}>{children}</blockquote>
         case 'alignLeft':
-            return <div style={{listStylePosition:'inside'}} {...attributes} {...element.attr}>{children}</div>
+            return <div style={{textAlign: "left"}} {...attributes} {...element.attr}>{children}</div>
         case 'alignCenter':
-            return <div style={{display:'flex',alignItems:'center',listStylePosition:'inside',flexDirection:'column'}} {...attributes} {...element.attr}>{children}</div>
+            return <div style={{textAlign: "center"}} {...attributes} {...element.attr}>{children}</div>
         case 'alignRight':
-            return <div style={{display:'flex',alignItems:'flex-end',listStylePosition:'inside',flexDirection:'column'}} {...attributes} {...element.attr}>{children}</div>
+            return <p style={{textAlign: "right"}} {...attributes} {...element.attr}>{children}</p>
+        case 'justify':
+            return <p style={{textAlign: "justify"}} {...attributes} {...element.attr}>{children}</p>
         case 'list-item':
             return  <li {...attributes} {...element.attr}>{children}</li>
         case 'orderedList':

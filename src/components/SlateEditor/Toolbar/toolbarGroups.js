@@ -110,6 +110,11 @@ const toolbarGroups = [
             format:'alignRight',
             type:'block'
         },
+        {
+            id:28,
+            format:'justify',
+            type:'block'
+        },
     ],
     [
         {

@@ -31,33 +31,37 @@
     width: 100%;
   }
 }
-
-
+/* 
+.about-image {
+  height: 100%;
+} */
 .mission-content {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .vision-content {
   display: flex;
   justify-content: space-between;
   flex-direction: row-reverse;
+  align-items: center;
 }
 .mission-text {
-  width: 60%;
+  width: 65%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .vision-text {
-  width: 60%;
+  width: 65%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 @media (max-width: 768px) {
-  .about_image {
+  .about-image {
     display: none;
   }
   .mission-content,

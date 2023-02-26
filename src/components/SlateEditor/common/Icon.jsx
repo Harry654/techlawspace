@@ -1,5 +1,5 @@
 import React from 'react';
-import { MdFormatBold, MdFormatItalic, MdStrikethroughS, MdFormatUnderlined, MdFormatQuote, MdFormatAlignLeft, MdFormatAlignCenter, MdFormatAlignRight, MdFormatListNumbered, MdFormatListBulleted,MdInsertLink,MdVideoLibrary,MdImage,MdAdd, MdArrowForward} from 'react-icons/md'
+import { MdFormatBold, MdFormatItalic, MdStrikethroughS, MdFormatUnderlined, MdFormatQuote, MdFormatAlignLeft, MdFormatAlignCenter, MdFormatAlignRight, MdFormatAlignJustify, MdFormatListNumbered, MdFormatListBulleted,MdInsertLink,MdVideoLibrary,MdImage,MdAdd, MdArrowForward} from 'react-icons/md'
 import { BsTypeH1, BsTypeH2, BsTypeH3, BsCameraVideoFill } from 'react-icons/bs'
 import { FaSuperscript,FaSubscript } from 'react-icons/fa'
 import { AiFillEdit,AiOutlineTable, AiOutlineInsertRowBelow, AiOutlineInsertRowRight,AiOutlineDelete, AiFillTag, AiOutlineUpload, AiOutlineArrowsAlt, AiOutlineInsertRowAbove, AiOutlineInsertRowLeft,AiFillHtml5 } from 'react-icons/ai'
@@ -19,6 +19,7 @@ const iconList={
     alignLeft:<MdFormatAlignLeft size={20}/>,
     alignCenter:<MdFormatAlignCenter size={20}/>,
     alignRight:<MdFormatAlignRight size={20}/>,
+    justify:<MdFormatAlignJustify size={20}/>,
     orderedList:<MdFormatListNumbered size={20}/>,
     unorderedList:<MdFormatListBulleted size={20}/>,
     link:<MdInsertLink size={20}/>,
