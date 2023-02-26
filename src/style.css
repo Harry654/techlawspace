@@ -44,6 +44,9 @@ html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
+html::-webkit-scrollbar {
+  display: none;
+}
 
 /* line 109, sass/libs/_normalize.scss */
 html,

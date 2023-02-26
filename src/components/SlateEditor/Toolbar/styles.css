@@ -1,27 +1,36 @@
-.toolbar{
-    border-radius: 10px;
-background: #ffffff;
-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    margin:20px 0;
-    display:flex;
-    flex-wrap:wrap;
-    align-items:center;
-    padding: 15px 10px;
-    row-gap: 15px;
-    position: -webkit-sticky;
+.toolbar {
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 15px 10px;
+  row-gap: 15px;
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 2;
 }
-.toolbar-grp>*{
-    margin-right: 10px;
-    cursor: pointer;
+.toolbar-grp > * {
+  margin-right: 10px;
+  cursor: pointer;
 }
-.toolbar-grp{
-    margin:0 10px;
+.toolbar-grp {
+  margin: 0 10px;
 }
-select{
-    height: 30px;
-    border: none;
-    width: 6.9rem;
+
+.toolbar-grp button {
+  background-color: white;
+  border: none;
+  opacity: 0.5;
+}
+.toolbar-grp .btnActive {
+  opacity: 1;
+}
+select {
+  height: 30px;
+  border: none;
+  width: 6.9rem;
 }

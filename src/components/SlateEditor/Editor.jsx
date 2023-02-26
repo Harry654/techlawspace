@@ -105,6 +105,8 @@ const SlateEditor = () => {
         return `<h3>${children}</h3>`;
       case "paragraph":
         return `<p>${children}</p>`;
+      case "blockquote":
+        return `<blockquote><p>${children}</p></blockquote>`;
       case "orderedList":
         return `<ol style="list-style-type: number;">${children}</ol>`;
       case "unorderedList":

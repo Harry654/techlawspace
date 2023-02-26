@@ -12,14 +12,7 @@ table, th, td {
 table{
     border-collapse: collapse;
 }
-button{
-    background-color: white;
-    border:none;
-    opacity: 0.5;
-}
-.btnActive{
-    opacity: 1;
-}
+
 .editor-wrapper{
     font-family:'Helvetica','Arial', sans-serif;
     border-radius: 10px;

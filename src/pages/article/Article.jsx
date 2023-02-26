@@ -116,7 +116,7 @@ const Article = () => {
   };
   return (
     <>
-      <NavBar />
+      <NavBar currentPage="publications" />
       <div className="article-page">
         <div className="article-page-inner">
           <h2>
@@ -133,7 +133,7 @@ const Article = () => {
             </div>
           </div>
           <img
-            src="https://picsum.photos/1000/1000"
+            src="https://picsum.photos/960/500"
             alt={article.title}
             className="thumbnail"
           />
