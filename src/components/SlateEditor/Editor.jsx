@@ -140,9 +140,9 @@ const SlateEditor = () => {
   return (
     <Slate editor={editor} value={value} onChange={handleEditorChange}>
       <Toolbar handleCodeToText={handleCodeToText} />
-      <div dangerouslySetInnerHTML={{ __html: html }} />
+      {/* <div dangerouslySetInnerHTML={{ __html: html }} />
       {html}
-      {JSON.stringify(value)}
+      {JSON.stringify(value)} */}
       <div
         className="editor-wrapper"
         style={{ border: "1px solid #f3f3f3", padding: "0 10px" }}

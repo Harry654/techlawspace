@@ -13,7 +13,7 @@
     "emotion": "^11.0.0",
     "image-extensions": "^1.1.0",
     "inline-css": "^3.0.0",
-    "interweave": "^12.8.0",
+    "interweave": "12.8.0",
     "is-hotkey": "^0.2.0",
     "is-url": "^1.2.4",
     "jsx-to-string": "^1.4.0",
