@@ -3,17 +3,17 @@
   /* background-color: yellow; */
   height: fit-content;
 }
-.upload-section input[name="title"] {
+.upload-article .upload-section input[name="title"] {
   font-weight: 20px;
   font-size: larger;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
-.upload-section input[name="tags"] {
+.upload-article .upload-section input[name="tags"] {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
-.upload-section input[type="text"] {
+.upload-article .upload-section input[type="text"] {
   width: 100%;
   /* max-width: 500px; */
   height: 40px;
@@ -23,7 +23,7 @@
   margin-top: 20px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-.upload-section details {
+.upload-article .upload-section details {
   background-color: #fff;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   padding: 20px;
@@ -52,8 +52,10 @@ details .summary:hover {
 details .author input[type="checkbox"] {
   width: 15px;
   height: 15px;
+  background-color: red;
   /* border-radius: 50px; */
 }
+
 .upload-article button[type="submit"] {
   width: 50%;
   height: 40px;
@@ -65,30 +67,38 @@ details .author input[type="checkbox"] {
   margin: 20px 25%;
   border: none;
   transition: 0.3s ease;
+  /* display: none; */
 }
 
 .upload-article button[type="submit"]:hover {
   transform: translateY(-5px);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-/* .upload-header {
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    background-color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 20px;
-    padding: 0 10px;
-    cursor: pointer;
+
+/* .upload-article .upload-section {
+  height: 50px;
 }
-.upload-header h2 {
-    color: #000;
-}
-.upload-section {
-    max-height: 50px;
-    transition: all 1s ease-in-out;
-}
-    
-    .upload-section:focus-within {
-        max-height: 1000px;
-    } */
+.upload-article .upload-section:focus-within {
+  height: 1000px;
+} */
+
+details[open] > div {
+    animation-name: slideDown;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      height: 0;
+      padding: 0;
+    }
+  
+    to {
+      opacity: 1;
+      height: var(--contentHeight);
+      padding: 20px;
+    }
+  }
+  

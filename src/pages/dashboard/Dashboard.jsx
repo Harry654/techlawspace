@@ -1,7 +1,6 @@
 import React from "react";
 import "./Dashboard.css";
 import NavBar from "../../components/navBar/NavBar";
-import UploadArticle from "../../components/UploadArticle/UploadArticle";
 
 function Dashboard() {
   
@@ -9,7 +8,6 @@ function Dashboard() {
     <div className="dashboard">
       <NavBar />
       <div className="dashboard-inner">
-        <UploadArticle />
       </div>
     </div>
   );
