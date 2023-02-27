@@ -1,17 +1,15 @@
 import React from "react";
-import Editor from "../../components/SlateEditor/Editor";
 import "./Dashboard.css";
+import NavBar from "../../components/navBar/NavBar";
+import UploadArticle from "../../components/UploadArticle/UploadArticle";
 
 function Dashboard() {
+  
   return (
     <div className="dashboard">
+      <NavBar />
       <div className="dashboard-inner">
-        <div className="upload-article transition">
-          <div className="upload-section transition">
-            <input placeholder="Upload article" />
-            <Editor />
-          </div>
-        </div>
+        <UploadArticle />
       </div>
     </div>
   );

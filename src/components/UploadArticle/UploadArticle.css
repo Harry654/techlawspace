@@ -1,0 +1,94 @@
+.upload-article {
+  width: 100%;
+  /* background-color: yellow; */
+  height: fit-content;
+}
+.upload-section input[name="title"] {
+  font-weight: 20px;
+  font-size: larger;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.upload-section input[name="tags"] {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.upload-section input[type="text"] {
+  width: 100%;
+  /* max-width: 500px; */
+  height: 40px;
+  outline: none;
+  border: none;
+  padding: 0 20px;
+  margin-top: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.upload-section details {
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 20px;
+  margin-top: 20px;
+}
+details .author {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: row-reverse;
+  /* background-color: red; */
+  height: 20px;
+  margin-top: 10px;
+  gap: 20px;
+  list-style: disc;
+}
+details .summary {
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+details .summary:hover {
+  padding-left: 10px;
+}
+details .author input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+  /* border-radius: 50px; */
+}
+.upload-article button[type="submit"] {
+  width: 50%;
+  height: 40px;
+  color: rgb(80, 80, 250);
+  background-color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 5px;
+  margin: 20px 25%;
+  border: none;
+  transition: 0.3s ease;
+}
+
+.upload-article button[type="submit"]:hover {
+  transform: translateY(-5px);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+/* .upload-header {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 0 10px;
+    cursor: pointer;
+}
+.upload-header h2 {
+    color: #000;
+}
+.upload-section {
+    max-height: 50px;
+    transition: all 1s ease-in-out;
+}
+    
+    .upload-section:focus-within {
+        max-height: 1000px;
+    } */

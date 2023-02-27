@@ -84,7 +84,7 @@ const Toolbar = (props)=>{
                 toolbarGroups.map((group,index) => 
                     <span key={index} className='toolbar-grp'>
                         {
-                            group.map((element) => 
+                            group.map((element, index) => 
                                 {
                                     switch (element.type) {
                                         case 'block' :
@@ -102,11 +102,11 @@ const Toolbar = (props)=>{
                                         case 'table':
                                             return <TableSelector key={element.id} editor={editor}/>
                                         case 'id':
-                                            return <Id editor={editor}/>
+                                            return <Id key={index} editor={editor}/>
                                         case 'equation':
-                                            return <EquationButton editor={editor}/>
+                                            return <EquationButton key={index} editor={editor}/>
                                         case 'codeToText':
-                                            return <CodeToTextButton handleButtonClick={handleCodeToText}/>
+                                            return <CodeToTextButton key={index} handleButtonClick={handleCodeToText}/>
                                         default:
                                             return null
                                     }
