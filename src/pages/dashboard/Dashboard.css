@@ -3,7 +3,8 @@
   height: 100vh;
   /* padding: 20px; */
   overflow: scroll;
-  background-color: rgb(80, 80, 250);
+  /* background-color: rgb(80, 80, 250); */
+  background-color: rgb(226, 217, 217);
 }
 .dashboard::-webkit-scrollbar {
   display: none;

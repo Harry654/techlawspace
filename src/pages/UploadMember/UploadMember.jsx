@@ -24,17 +24,10 @@ function UploadMember() {
     const { name, value } = e.target;
     setMemberData((prev) => ({
       ...prev,
-      [name]: name !== "authors" ? value : updateAuthors(value),
+      [name]: value
     }));
   };
 
-  const updateAuthors = (value) => {
-    if (memberData.authors.includes(value)) {
-      return memberData.authors.filter((author) => author.id !== value.id);
-    }
-
-    return [...memberData.authors, value];
-  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
