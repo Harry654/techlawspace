@@ -7,7 +7,7 @@ function Footer() {
         <div style={{ paddingLeft: 20, paddingRight: 20 }}>
             <div className="subscribe-form" style={{ background: "linear-gradient(to right, #15281C, #256A5C)" }}>
                 <form action="!#">
-                    <label for="email">
+                    <label htmlFor="email">
                         <span style={{ fontSize: "15px" }}>Get notifications of our latest posts sent straight to your inbox</span>
                     </label>
                     <div className="control">

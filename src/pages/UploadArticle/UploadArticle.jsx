@@ -1,12 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import Editor from "../../components/SlateEditor/Editor";
 import ImagePicker from "../../components/ImagePicker/ImagePicker";
 import members from "../../utils/members.json";
 import serialize from "../../components/SlateEditor/serializer";
 import NavBar from "../../components/navBar/NavBar";
 import "./UploadArticle.css";
+import axios from "axios";
+import { ServerContext } from "../../context/ServerContext";
 
 function UploadArticle() {
+  const { API_SERVER_URL } = useContext(ServerContext);
   const [selectedFile, setSelectedFile] = useState(null);
   const [previewUrl, setPreviewUrl] = useState(null);
   const [articleData, setArticleData] = useState({
@@ -33,40 +36,68 @@ function UploadArticle() {
     const { name, value } = e.target;
     setArticleData((prev) => ({
       ...prev,
-      [name]: name !== "authors" ? value : updateAuthors(value),
+      [name]: name !== "authors" ? value : updateAuthors(JSON.parse(value)),
     }));
   };
 
   const updateAuthors = (value) => {
-    if (articleData.authors.includes(value)) {
+    if (isCurrentAuthor(value.id)) {
       return articleData.authors.filter((author) => author.id !== value.id);
     }
 
     return [...articleData.authors, value];
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData();
     formData.append("file", selectedFile, selectedFile.name);
 
+    // serialize the nodes form the slate editor
     const html = serialize({
       children: contentValue,
     });
 
-    const newArticleData = { ...articleData, content: html };
-    formData.append("articleData", newArticleData);
-    console.log(newArticleData);
+    const splitTags = articleData.tags.split(/,\s*|\s+/);
+    formData.append(
+      "articleData",
+      JSON.stringify({
+        ...articleData,
+        tags: splitTags,
+        content: html,
+      })
+    );
+    // console.log(newArticleData);
+    let options = {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "multipart/form-data",
+        authorization:
+          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2Nzc1MzM5NzV9.klvPNKHNG3p4b6uDjOniUV47AUNWKuVmQHSaWd9L-O0",
+      },
+    };
+    try {
+      let res = await axios.post(
+        `${API_SERVER_URL}/v1/posts/new`,
+        formData,
+        options
+      );
+      // res = await res.json();
+      // return console.log(res);
+
+      const { message } = res.data;
+      console.log(message);
+    } catch (error) {
+      console.log(error);
+      alert("something went wrong");
+    }
   };
 
   const isCurrentAuthor = (id) => {
-    return Object.keys(articleData).forEach((author) => {
-      if (author.id === id) {
-        return true;
-      }
-
-      return false;
-    });
+    let isCurrentAuthor = articleData.authors.find((author) => author.id === id);
+    if(isCurrentAuthor) return true;
+    return false;
   };
   return (
     <div className="dashboard">
@@ -109,7 +140,7 @@ function UploadArticle() {
                       id={`member ${index}`}
                       type="checkbox"
                       name="authors"
-                      value={{ id: index, name: member.name }}
+                      value={JSON.stringify({ id: index, name: member.name })}
                       checked={isCurrentAuthor(index)}
                       onChange={handleArticleInputChange}
                     />
