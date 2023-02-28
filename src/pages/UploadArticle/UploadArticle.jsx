@@ -87,7 +87,7 @@ function UploadArticle() {
       // return console.log(res);
 
       const { message } = res.data;
-      console.log(message);
+      // console.log(message);
     } catch (error) {
       console.log(error);
       alert("something went wrong");

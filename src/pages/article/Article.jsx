@@ -12,6 +12,8 @@ import { ServerContext } from "../../context/ServerContext";
 const Article = () => {
   const { slug } = useParams();
   const [article, setArticle] = useState();
+  const [relatedNews, setRelatedNews] = useState([]);
+  const [latestNews, setLatestNews] = useState([]);
   const [loading, setLoading] = useState(true);
   const { API_SERVER_URL, IMAGE_SERVER_URL } = useContext(ServerContext);
 
@@ -19,12 +21,15 @@ const Article = () => {
     window.scrollTo(0, 0);
     try {
       const res = await axios.get(`${API_SERVER_URL}/v1/posts/${slug}`);
-      let { post, success, statusCode } = res.data;
+      let { post, success, relatedNews, latestNews } = res.data;
+      // return console.log(post)
 
       if (success) {
         const authors = post.authors.map((author) => author.name);
         post["authors"] = authors;
         setArticle(post);
+        setRelatedNews(relatedNews.filter((news) => news._id !== post._id));
+        setLatestNews(latestNews.filter((news) => news._id !== post._id));
         setLoading(false);
 
         let link = document.querySelector("link[rel~='icon']");
@@ -41,7 +46,6 @@ const Article = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [slug]);
 
-
   const createMarkup = () => {
     return { __html: article.content };
   };
@@ -51,61 +55,70 @@ const Article = () => {
     <>
       <NavBar currentPage="publications" />
       <div className="article-page">
-        <div className="article-page-inner">
-          <h2>{article.title}</h2>
-          <div className="article-meta">
-            <p>By {article.authors.join(", ")}</p>
-            <p>{article.createdAt}</p>
-            <div className="share">
-              <ShareButton platform="whatsapp" />
-              <ShareButton platform="twitter" />
+        <div className="article-page-box">
+          <div className="article-page-inner">
+            <h2>{article.title}</h2>
+            <div className="article-meta">
+              <p>By {article.authors.join(", ")}</p>
+              <p>{article.createdAt}</p>
+              <div className="share">
+                <ShareButton platform="whatsapp" />
+                <ShareButton platform="twitter" />
+              </div>
+            </div>
+            <img
+              src={`${IMAGE_SERVER_URL}/v1/images/${article.thumbnail}`}
+              alt={article.title}
+              className="thumbnail"
+            />
+            <div dangerouslySetInnerHTML={createMarkup()} className="content" />
+            <p>
+              This article was written by{" "}
+              <strong>{article.authors.join(", ")}</strong>. He is a Lorem ipsum
+              dolor sit amet, consectetur adipiscing elit. Sed pharetra urna in
+              felis rutrum ullamcorper.
+            </p>
+          </div>
+
+          <div className="article-tags">
+            <h3>Tags</h3>
+            <div className="article-tags-inner">
+              {article.tags.map((tag, index) => (
+                <span key={index} className="tag transition">
+                  {tag}
+                </span>
+              ))}
             </div>
           </div>
-          <img
-            src={`${IMAGE_SERVER_URL}/v1/images/${article.thumbnail}`}
-            alt={article.title}
-            className="thumbnail"
-          />
-          <div dangerouslySetInnerHTML={createMarkup()} className="content" />
-          <p>
-            This article was written by{" "}
-            <strong>{article.authors.join(", ")}</strong>. He is a Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit. Sed pharetra urna in
-            felis rutrum ullamcorper.
-          </p>
         </div>
-        {/* <div className="related-news">
-          <h2>Next up in Tech News</h2>
-          <div className="news-group">
-            {article.relatedNews.map((article, index) => (
-              <ArticleCard
-                key={index}
-                // index={index}
-                article={{
-                  thumbnail: "../../images/bg.jpg",
-                  title: "A new day",
-                  date: "21-02-2023",
-                }}
-              />
-            ))}
+        {relatedNews.length > 0 ? (
+          <div className="related-news">
+            <h2>Next up in {article.category} News</h2>
+            <div className="news-group">
+              {relatedNews.map((article, index) => (
+                <ArticleCard
+                  key={index}
+                  // index={index}
+                  article={article}
+                />
+              ))}
+            </div>
           </div>
-        </div>
-        <div className="latest-news">
-          <h2>Latest News</h2>
-          <div className="news-group">
-            {article.latestNews.map((article, index) => (
-              <ArticleCard
-                key={index}
-                index={index}
-                article={{
-                  thumbnail: "../../images/bg.jpg",
-                  title: "A new day",
-                  date: "21-02-2023",
-                }}
-              />
-            ))}
+        ) : (
+          ""
+        )}
+        {latestNews.length > 0 ? (
+          <div className="latest-news">
+            <h2>Latest News</h2>
+            <div className="news-group">
+              {latestNews.map((article, index) => (
+                <ArticleCard key={index} index={index} article={article} />
+              ))}
+            </div>
           </div>
-        </div> */}
+        ) : (
+          ""
+        )}
       </div>
       <Footer />
     </>
