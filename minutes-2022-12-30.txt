@@ -1,4 +1,4 @@
-home - change text
-about us - change pictures and text
-our team page - profiles that popup onclick
-publications - centurion style
+home - change text (Done)
+about us - change pictures and text (Done)
+our team page - profiles that popup onclick (Done)
+publications - centurion style (Done)
