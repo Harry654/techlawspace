@@ -21,7 +21,7 @@ const ImagePicker = ({ previewUrl, setPreviewUrl, setSelectedFile }) => {
 
   return (
     <div className="image-picker" onClick={handleClickInput}>
-      <input id="file-selector" type="file" onChange={fileSelectedHandler} />
+      <input id="file-selector" type="file" onChange={fileSelectedHandler} accept="image/png, image/jpeg, image/jpg" />
 
       {!previewUrl && <IoMdCloudUpload color="rgb(80, 80, 250)" size={100} />}
       {!previewUrl && <p>Upload Thumbnail</p>}
