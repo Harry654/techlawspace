@@ -14,14 +14,15 @@ function Publications() {
   const [search, setSearch] = useState(searchParams.get("q") || "");
   const [articleCategory, setArticleCategory] = useState(
     searchParams.get("c") || ""
-  );
+    );
+    const tag = searchParams.get("t") || "";
   let limit = 10;
   const { API_SERVER_URL } = useContext(ServerContext);
 
   async function fetchArticles(query = search, category = articleCategory) {
     try {
       const res = await axios.get(
-        `${API_SERVER_URL}/v1/posts/?search=${query}&category=${category}&limit=${limit}`
+        `${API_SERVER_URL}/v1/posts/?search=${query}&category=${category}&tag=${tag}&limit=${limit}`
       );
       let { posts, success } = res.data;
       // return console.log(post)

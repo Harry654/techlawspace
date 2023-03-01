@@ -9,6 +9,7 @@ import axios from "axios";
 import { useState } from "react";
 import { ServerContext } from "../../context/ServerContext";
 import categories from "../../utils/categories.json";
+import { Link } from "react-router-dom";
 
 const Article = () => {
   const { slug } = useParams();
@@ -86,9 +87,9 @@ const Article = () => {
             <h3>Tags</h3>
             <div className="article-tags-inner">
               {article.tags.map((tag, index) => (
-                <span key={index} className="tag transition">
+                <Link to={`/publications?t=${tag}`} key={index} className="tag transition">
                   {tag}
-                </span>
+                </Link>
               ))}
             </div>
           </div>
@@ -96,10 +97,10 @@ const Article = () => {
           <div className="article-tags">
             <h3>Discover</h3>
             <div className="article-tags-inner">
-              {categories.map((tag, index) => (
-                <span key={index} className="tag transition">
-                  {tag}
-                </span>
+              {categories.map((category, index) => (
+                <Link to={`/publications?c=${category}`} key={index} className="tag transition">
+                  {category}
+                </Link>
               ))}
             </div>
           </div>
