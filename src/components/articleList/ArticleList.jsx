@@ -5,13 +5,13 @@ import ArticleCard from "../articleCard/ArticleCard";
 const ArticleList = ({ articles }) => {
   return (
     <div className="articles">
-      {articles.map((article, index) => (
+      {articles.length > 0 ? articles.map((article, index) => (
         <ArticleCard
           key={index}
           index={index}
           article={article}
         />
-      ))}
+      )) : "No articles found"}
     </div>
   );
 };
