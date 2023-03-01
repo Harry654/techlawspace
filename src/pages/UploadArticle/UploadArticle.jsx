@@ -55,7 +55,7 @@ function UploadArticle() {
       "articleData",
       JSON.stringify({
         ...articleData,
-        tags: splitTags,
+        tags: [...splitTags, ""],
         content: html,
       })
     );

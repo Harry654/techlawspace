@@ -87,6 +87,7 @@ const Article = () => {
             <h3>Tags</h3>
             <div className="article-tags-inner">
               {article.tags.map((tag, index) => (
+                tag &&
                 <Link to={`/publications?t=${tag}`} key={index} className="tag transition">
                   {tag}
                 </Link>

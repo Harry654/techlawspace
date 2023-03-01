@@ -15,14 +15,15 @@ function Publications() {
   const [articleCategory, setArticleCategory] = useState(
     searchParams.get("c") || ""
     );
-    const tag = searchParams.get("t") || "";
+    const [tag, setTag] = useState(searchParams.get("t") || "");
   let limit = 10;
   const { API_SERVER_URL } = useContext(ServerContext);
 
-  async function fetchArticles(query = search, category = articleCategory) {
+  async function fetchArticles(query = search, category = articleCategory, articleTag = tag) {
+    // console.log(`${API_SERVER_URL}/v1/posts/?search=${query}&category=${category}&tag=${articleTag}&limit=${limit}`);
     try {
       const res = await axios.get(
-        `${API_SERVER_URL}/v1/posts/?search=${query}&category=${category}&tag=${tag}&limit=${limit}`
+        `${API_SERVER_URL}/v1/posts/?search=${query}&category=${category}&tag=${articleTag}&limit=${limit}`
       );
       let { posts, success } = res.data;
       // return console.log(post)
@@ -37,14 +38,16 @@ function Publications() {
     }
   }
   function filterSearch(e) {
-    // return console.log(e.target.value);
     setSearch(e.target.value);
     fetchArticles(e.target.value);
   }
   function filterCategory(category) {
-    // return console.log(e.target.value);
     setArticleCategory(category);
     fetchArticles(search, category);
+  }
+  function clearTags() {
+    setTag("");
+    fetchArticles(search, articleCategory, "");
   }
 
   useEffect(() => {
@@ -65,6 +68,8 @@ function Publications() {
                 filterSearch={filterSearch}
                 articleCategory={articleCategory}
                 filterCategory={filterCategory}
+                tag={tag}
+                clearTags={clearTags}
               />
               <ArticleList articles={articles} />
             </main>

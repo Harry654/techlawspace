@@ -17,6 +17,10 @@
   transform: translateY(-5px);
   border-radius: 10px;
 }
+.box:focus-within ~ .suggestions {
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
 .box:focus-within ~ .suggestions p {
   height: 50px;
   color: #000000;
@@ -50,7 +54,6 @@
   background-color: #fff;
 }
 .suggestions {
-  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
   width: 80%;
   max-width: 500px;
   /* max-height: 200px;
@@ -58,12 +61,24 @@
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   position: absolute;
-  background-color: rgba(255, 255, 255, 0.9);
   margin-top: 50px;
   /* display: none; */
   z-index: 5;
 }
 
+.suggestions span {
+  width: fit-content;
+  border-radius: 20px;
+  background-color: rgb(80, 80, 250);
+  color: #fff;
+  padding: 5px 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 5px auto;
+}
 .suggestions p {
   height: 0px;
   color: #fff;
@@ -73,7 +88,7 @@
   padding-right: 10px;
   margin-bottom: 0px;
   cursor: pointer;
-  transition: .9s ease-in-out;
+  transition: 0.9s ease-in-out;
   overflow: hidden;
 }
 
