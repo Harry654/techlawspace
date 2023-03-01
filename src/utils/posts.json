@@ -1,0 +1,105 @@
+[
+  {
+    "_id": {
+      "$oid": "63fe33acfa603bd890a50fcd"
+    },
+    "title": "First Article",
+    "slug": "first-article",
+    "category": "National",
+    "content": "<blockquote><p>rfr</p></blockquote>",
+    "thumbnail": "1677603756805-HD-wallpaper-iron-man-death-iron-man-sad.jpg",
+    "authors": [
+      {
+        "id": 0,
+        "name": "John Doe"
+      }
+    ],
+    "tags": ["avengers", "tony", "stark", "thanos", "marvel", "mcu", "disney"],
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1677603756838"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1677603756838"
+      }
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "63fe4dd260aab786aecbbff0"
+    },
+    "title": "second article",
+    "slug": "second-article",
+    "category": "National",
+    "content": "<p>Bucky Barnes</p>",
+    "thumbnail": "1677610450075-ba4bad17451852664d57762f7267d2a55d-05-bucky-4-winter-soldier.2x.w710.jpg",
+    "authors": [
+      {
+        "id": 2,
+        "name": "Bob Johnson"
+      }
+    ],
+    "tags": [
+      "avengers",
+      "tony",
+      "stark",
+      "thanos",
+      "marvel",
+      "mcu",
+      "disney",
+      "wintersoilder01"
+    ],
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1677610450093"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1677610450093"
+      }
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "63fe4ea260aab786aecbc002"
+    },
+    "title": "Third Article",
+    "slug": "third-article",
+    "category": "Culture",
+    "content": "<p>Tony <em>Stark</em></p>",
+    "thumbnail": "1677610658278-tony-stark-1200.jpg",
+    "authors": [
+      {
+        "id": 3,
+        "name": "Sarah Lee"
+      }
+    ],
+    "tags": [
+      "avengers",
+      "tony",
+      "stark",
+      "thanos",
+      "marvel",
+      "mcu",
+      "disney",
+      "tony",
+      "stark"
+    ],
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1677610658283"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1677610658283"
+      }
+    },
+    "__v": 0
+  }
+]

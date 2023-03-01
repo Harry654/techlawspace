@@ -8,6 +8,7 @@ import "./Article.css";
 import axios from "axios";
 import { useState } from "react";
 import { ServerContext } from "../../context/ServerContext";
+import categories from "../../utils/categories.json";
 
 const Article = () => {
   const { slug } = useParams();
@@ -18,7 +19,6 @@ const Article = () => {
   const { API_SERVER_URL, IMAGE_SERVER_URL } = useContext(ServerContext);
 
   async function fetchArticle(slug) {
-    window.scrollTo(0, 0);
     try {
       const res = await axios.get(`${API_SERVER_URL}/v1/posts/${slug}`);
       let { post, success, relatedNews, latestNews } = res.data;
@@ -31,7 +31,7 @@ const Article = () => {
         setRelatedNews(relatedNews.filter((news) => news._id !== post._id));
         setLatestNews(latestNews.filter((news) => news._id !== post._id));
         setLoading(false);
-
+        
         let link = document.querySelector("link[rel~='icon']");
         link.href = `${IMAGE_SERVER_URL}/v1/images/${post.thumbnail}`;
       }
@@ -41,6 +41,7 @@ const Article = () => {
     }
   }
   useEffect(() => {
+    window.scrollTo(0, 0);
     fetchArticle(slug);
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -80,6 +81,7 @@ const Article = () => {
             </p>
           </div>
 
+          <div className="side-bar">
           <div className="article-tags">
             <h3>Tags</h3>
             <div className="article-tags-inner">
@@ -90,6 +92,19 @@ const Article = () => {
               ))}
             </div>
           </div>
+
+          <div className="article-tags">
+            <h3>Discover</h3>
+            <div className="article-tags-inner">
+              {categories.map((tag, index) => (
+                <span key={index} className="tag transition">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+          </div>
+
         </div>
         {relatedNews.length > 0 ? (
           <div className="related-news">

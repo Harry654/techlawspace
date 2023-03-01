@@ -7,6 +7,7 @@ import NavBar from "../../components/navBar/NavBar";
 import "./UploadArticle.css";
 import axios from "axios";
 import { ServerContext } from "../../context/ServerContext";
+import categories from "../../utils/categories.json";
 
 function UploadArticle() {
   const { API_SERVER_URL } = useContext(ServerContext);
@@ -23,15 +24,6 @@ function UploadArticle() {
       children: [{ text: "" }],
     },
   ]);
-  const categories = [
-    "National",
-    "World",
-    "Culture",
-    "Politics",
-    "Education",
-    "Science",
-    "Sports",
-  ];
   const handleArticleInputChange = (e) => {
     const { name, value } = e.target;
     setArticleData((prev) => ({
@@ -87,7 +79,7 @@ function UploadArticle() {
       // return console.log(res);
 
       const { message } = res.data;
-      // console.log(message);
+      console.log(message);
     } catch (error) {
       console.log(error);
       alert("something went wrong");
@@ -157,8 +149,8 @@ function UploadArticle() {
                       htmlFor={`category ${index}`}
                       style={
                         category === articleData.category
-                          ? { opacity: 1, fontWeight: "bold", color: "#000" }
-                          : {}
+                          ? { opacity: 1, fontWeight: "bold", color: "#000", textTransform: "capitalize" }
+                          : { textTransform: "capitalize" }
                       }
                     >
                       {category}

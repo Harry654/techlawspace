@@ -1,11 +1,11 @@
 import React from "react";
 import "./SearchBar.css";
 
-const SearchBar = () => {
+const SearchBar = ({ search, filterSearch }) => {
   return (
     <div className="search-container transition">
       <div className="box transition">
-        <input type="text" className="input" name="txt" placeholder="search..." />
+        <input type="text" className="input" name="txt" placeholder="search..." value={search} onChange={filterSearch} />
         <i className="fa fa-search"></i>
       </div>
 

@@ -8,6 +8,12 @@
   justify-content: space-between;
   flex-wrap: wrap;
 }
+.side-bar {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  max-width: 500px;
+}
 .article-page-box .article-tags {
   height: fit-content;
   width: 300px;
@@ -26,12 +32,13 @@
 .article-page-box .article-tags .article-tags-inner .tag {
   width: fit-content;
   border-radius: 20px;
-  background-color: gray;
-  color: #000;
+  background-color: rgb(80,80,250);
+  color: #fff;
   padding: 5px 20px;
   cursor: pointer;
 }
 .article-page-box .article-tags .article-tags-inner .tag:hover {
+  color: #000;
   background-color: #fff;
 }
 .article-page-inner {

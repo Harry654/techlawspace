@@ -1,22 +1,60 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import NavBar from "../../components/navBar/NavBar";
 import Footer from "../../components/footer/Footer";
 import SearchBar from "../../components/searchBar/SearchBar";
 import ArticleList from "../../components/articleList/ArticleList";
+import axios from "axios";
+import { useContext } from "react";
+import { ServerContext } from "../../context/ServerContext";
+// import 
 
 function Publications() {
+  const [articles, setArticles] = useState();
+  const [loading, setLoading] = useState();
+  const [search, setSearch] = useState("");
+  let limit = 10;
+  const { API_SERVER_URL } = useContext(ServerContext);
+
+  async function fetchArticles(query = "", category = "") {
+    try {
+      const res = await axios.get(
+        `${API_SERVER_URL}/v1/posts/?search=${query}&category=${category}&limit=${limit}`
+      );
+      let { posts, success } = res.data;
+      // return console.log(post)
+
+      if (success) {
+        setArticles(posts);
+        setLoading(false);
+      }
+    } catch (error) {
+      setLoading(false);
+      console.log(`${error.message}`);
+    }
+  }
+  function filterSearch(e) {
+    // return console.log(e.target.value);
+    setSearch(e.target.value);
+    fetchArticles(e.target.value);
+  }
+
   useEffect(() => {
     window.scrollTo(0, 0);
+    fetchArticles();
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <div>
       <NavBar currentPage="publications" />
       <div className="background">
         <div id="site-content">
-          <main className="main-content">
-            <SearchBar />
-            <ArticleList />
-          </main>
+          {articles && (
+            <main className="main-content">
+              <SearchBar search={search} filterSearch={filterSearch} />
+              <ArticleList articles={articles} />
+            </main>
+          )}
         </div>
       </div>
       <Footer />
