@@ -10,6 +10,7 @@ import { useState } from "react";
 import { ServerContext } from "../../context/ServerContext";
 import categories from "../../utils/categories.json";
 import { Link } from "react-router-dom";
+import ArticleList from "../../components/articleList/ArticleList";
 
 const Article = () => {
   const { slug } = useParams();
@@ -32,7 +33,7 @@ const Article = () => {
         setRelatedNews(relatedNews.filter((news) => news._id !== post._id));
         setLatestNews(latestNews.filter((news) => news._id !== post._id));
         setLoading(false);
-        
+
         let link = document.querySelector("link[rel~='icon']");
         link.href = `${IMAGE_SERVER_URL}/v1/images/${post.thumbnail}`;
       }
@@ -83,30 +84,39 @@ const Article = () => {
           </div>
 
           <div className="side-bar">
-          <div className="article-tags">
-            <h3>Tags</h3>
-            <div className="article-tags-inner">
-              {article.tags.map((tag, index) => (
-                tag &&
-                <Link to={`/publications?t=${tag}`} key={index} className="tag transition">
-                  {tag}
-                </Link>
-              ))}
+            <div className="article-tags">
+              <h3>Tags</h3>
+              <div className="article-tags-inner">
+                {article.tags.map(
+                  (tag, index) =>
+                    tag && (
+                      <Link
+                        to={`/publications?t=${tag}`}
+                        key={index}
+                        className="tag transition"
+                      >
+                        {tag}
+                      </Link>
+                    )
+                )}
+              </div>
+            </div>
+
+            <div className="article-tags">
+              <h3>Discover</h3>
+              <div className="article-tags-inner">
+                {categories.map((category, index) => (
+                  <Link
+                    to={`/publications?c=${category}`}
+                    key={index}
+                    className="tag transition"
+                  >
+                    {category}
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
-
-          <div className="article-tags">
-            <h3>Discover</h3>
-            <div className="article-tags-inner">
-              {categories.map((category, index) => (
-                <Link to={`/publications?c=${category}`} key={index} className="tag transition">
-                  {category}
-                </Link>
-              ))}
-            </div>
-          </div>
-          </div>
-
         </div>
         {relatedNews.length > 0 ? (
           <div className="related-news">
@@ -127,11 +137,7 @@ const Article = () => {
         {latestNews.length > 0 ? (
           <div className="latest-news">
             <h2>Latest News</h2>
-            <div className="news-group">
-              {latestNews.map((article, index) => (
-                <ArticleCard key={index} index={index} article={article} />
-              ))}
-            </div>
+            <ArticleList articles={latestNews} />
           </div>
         ) : (
           ""

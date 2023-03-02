@@ -1,8 +1,9 @@
-import members from "../../utils/members.json";
+// import members from "../../utils/members.json";
 import Team from "../Team/Team";
 import { Zoom } from "react-awesome-reveal";
 
-const TeamList = ({ teams }) => {
+const TeamList = ({ teams, members }) => {
+  
   return (
     <div style={{ paddingTop: 20 }}>
       {teams.map((teamName, index) => (
@@ -13,7 +14,7 @@ const TeamList = ({ teams }) => {
           <Zoom>
             <h2 style={{ marginLeft: 30 }}>{teamName} Law</h2>
           </Zoom>
-          <Team members={members} />
+          <Team teamName={teamName} members={members} />
         </div>
       ))}
     </div>

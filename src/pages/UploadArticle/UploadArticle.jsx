@@ -8,11 +8,13 @@ import "./UploadArticle.css";
 import axios from "axios";
 import { ServerContext } from "../../context/ServerContext";
 import categories from "../../utils/categories.json";
+import { Link } from "react-router-dom";
 
 function UploadArticle() {
-  const { API_SERVER_URL } = useContext(ServerContext);
+  const { API_SERVER_URL, authorizationToken } = useContext(ServerContext);
   const [selectedFile, setSelectedFile] = useState(null);
   const [previewUrl, setPreviewUrl] = useState(null);
+  const [newArticleSlug, setNewArticleSlug] = useState("");
   const [articleData, setArticleData] = useState({
     title: "",
     authors: [],
@@ -42,6 +44,12 @@ function UploadArticle() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const { title, authors, category } = articleData;
+    if (!(title && selectedFile && category))
+      return alert("A required field is empty!");
+    if (!(authors.length > 0 && contentValue.length > 0))
+      return alert("A required field is empty!");
+
     const formData = new FormData();
     formData.append("file", selectedFile, selectedFile.name);
 
@@ -51,6 +59,7 @@ function UploadArticle() {
     });
 
     const splitTags = articleData.tags.split(/,\s*|\s+/);
+    
     formData.append(
       "articleData",
       JSON.stringify({
@@ -65,8 +74,7 @@ function UploadArticle() {
       headers: {
         Accept: "application/json",
         "Content-Type": "multipart/form-data",
-        authorization:
-          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2Nzc1MzM5NzV9.klvPNKHNG3p4b6uDjOniUV47AUNWKuVmQHSaWd9L-O0",
+        authorization: `Bearer ${authorizationToken}`,
       },
     };
     try {
@@ -76,10 +84,18 @@ function UploadArticle() {
         options
       );
       // res = await res.json();
-      // return console.log(res);
 
-      const { message } = res.data;
-      console.log(message);
+      // return console.log(res.data);
+      const { message, newPost, success } = res.data;
+      alert(message);
+      if (success) {
+        setArticleData({
+          title: "",
+          authors: [],
+          tags: "",
+        });
+        setNewArticleSlug(newPost.slug);
+      }
     } catch (error) {
       console.log(error);
       alert("something went wrong");
@@ -87,8 +103,10 @@ function UploadArticle() {
   };
 
   const isCurrentAuthor = (id) => {
-    let isCurrentAuthor = articleData.authors.find((author) => author.id === id);
-    if(isCurrentAuthor) return true;
+    let isCurrentAuthor = articleData.authors.find(
+      (author) => author.id === id
+    );
+    if (isCurrentAuthor) return true;
     return false;
   };
   return (
@@ -149,7 +167,12 @@ function UploadArticle() {
                       htmlFor={`category ${index}`}
                       style={
                         category === articleData.category
-                          ? { opacity: 1, fontWeight: "bold", color: "#000", textTransform: "capitalize" }
+                          ? {
+                              opacity: 1,
+                              fontWeight: "bold",
+                              color: "#000",
+                              textTransform: "capitalize",
+                            }
                           : { textTransform: "capitalize" }
                       }
                     >
@@ -175,7 +198,11 @@ function UploadArticle() {
               onChange={handleArticleInputChange}
             />
           </div>
-
+          {newArticleSlug && (
+            <Link to={`/articles/${newArticleSlug}`} className="slug">
+              Visit article on website
+            </Link>
+          )}
           <button type="submit" onClick={handleSubmit}>
             Upload
           </button>

@@ -83,22 +83,29 @@ details .author input[type="checkbox"] {
 } */
 
 details[open] > div {
-    animation-name: slideDown;
-    animation-duration: 0.3s;
-    animation-fill-mode: forwards;
+  animation-name: slideDown;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    height: 0;
+    padding: 0;
   }
 
-  @keyframes slideDown {
-    from {
-      opacity: 0;
-      height: 0;
-      padding: 0;
-    }
-  
-    to {
-      opacity: 1;
-      height: var(--contentHeight);
-      padding: 20px;
-    }
+  to {
+    opacity: 1;
+    height: var(--contentHeight);
+    padding: 20px;
   }
-  
+}
+.slug {
+  width: fit-content;
+  border-radius: 20px;
+  background-color: rgb(80, 80, 250);
+  color: #fff;
+  padding: 5px 20px;
+  cursor: pointer;
+}

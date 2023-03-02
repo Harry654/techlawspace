@@ -9,7 +9,7 @@ import {
 } from "react-icons/io5";
 import "./Team.css";
 
-const Team = ({ members }) => {
+const Team = ({ teamName, members }) => {
   const settings = {
     infinite: false,
     speed: 500,
@@ -108,14 +108,18 @@ const Team = ({ members }) => {
   return (
     <Slider {...settings} beforeChange={handleBeforeChange}>
       {/* {currentSlide} */}
-      {members.map((member, index) => (
-        <TeamMember
-          key={index}
-          index={index}
-          margin={index > currentSlide && currentSlide === 0}
-          {...member}
-        />
-      ))}
+      {members.map((member, index) => {
+        // if (member.category === teamName)
+          return (
+            <TeamMember
+              key={index}
+              index={index}
+              margin={index > currentSlide && currentSlide === 0}
+              {...member}
+            />
+          );
+        return null;
+      })}
     </Slider>
   );
 };

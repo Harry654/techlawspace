@@ -10,7 +10,6 @@ import { ServerContext } from "../../context/ServerContext";
 function Publications() {
   const searchParams = new URLSearchParams(document.location.search);
   const [articles, setArticles] = useState();
-  const [loading, setLoading] = useState();
   const [search, setSearch] = useState(searchParams.get("q") || "");
   const [articleCategory, setArticleCategory] = useState(
     searchParams.get("c") || ""
@@ -30,10 +29,8 @@ function Publications() {
 
       if (success) {
         setArticles(posts);
-        setLoading(false);
       }
     } catch (error) {
-      setLoading(false);
       console.log(`${error.message}`);
     }
   }
@@ -61,7 +58,7 @@ function Publications() {
       <NavBar currentPage="publications" />
       <div className="background">
         <div id="site-content">
-          {articles && (
+          {articles ? (
             <main className="main-content">
               <SearchBar
                 search={search}
@@ -73,7 +70,7 @@ function Publications() {
               />
               <ArticleList articles={articles} />
             </main>
-          )}
+          ) : <h2>Loading...</h2>}
         </div>
       </div>
       <Footer />
