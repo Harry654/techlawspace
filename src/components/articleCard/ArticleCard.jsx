@@ -6,6 +6,10 @@ import "./ArticleCard.css";
 
 const ArticleCard = ({ article, index }) => {
   const { IMAGE_SERVER_URL } = useContext(ServerContext);
+  const date = new Date(article.date);
+  const year = date.getFullYear();
+  const month = parseInt(date.getMonth()) + 1;
+  const day = date.getDate();
   return (
     <Link to={`/articles/${article.slug}`} className={`card ${index === 0 ? "first" : ""}`}>
       <img
@@ -19,7 +23,7 @@ const ArticleCard = ({ article, index }) => {
         <p className="card-text">
          {" Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor".repeat(10)}
         </p>
-        <p className="card-date">{`By ${article.authors[0].name}`} | {article.createdAt}</p>
+        <p className="card-date">{`By ${article.authors[0].name}`} | {`${year}-${(month) > 10 ? month : '0' + (month)}-${(day) > 10 ? day : '0' + (day)}`}</p>
       </div>
     </Link>
   );

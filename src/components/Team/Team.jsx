@@ -110,14 +110,14 @@ const Team = ({ teamName, members }) => {
       {/* {currentSlide} */}
       {members.map((member, index) => {
         // if (member.category === teamName)
-          return (
-            <TeamMember
-              key={index}
-              index={index}
-              margin={index > currentSlide && currentSlide === 0}
-              {...member}
-            />
-          );
+        return (
+          <TeamMember
+            key={index}
+            index={index}
+            margin={index > currentSlide && currentSlide === 0}
+            {...member}
+          />
+        );
         return null;
       })}
     </Slider>

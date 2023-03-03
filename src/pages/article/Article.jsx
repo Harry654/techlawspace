@@ -15,6 +15,7 @@ import ArticleList from "../../components/articleList/ArticleList";
 const Article = () => {
   const { slug } = useParams();
   const [article, setArticle] = useState();
+  const [dateTime, setDateTime] = useState();
   const [relatedNews, setRelatedNews] = useState([]);
   const [latestNews, setLatestNews] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -32,6 +33,21 @@ const Article = () => {
         setArticle(post);
         setRelatedNews(relatedNews.filter((news) => news._id !== post._id));
         setLatestNews(latestNews.filter((news) => news._id !== post._id));
+
+        const date = new Date(post.date);
+        const year = date.getFullYear();
+        const month = parseInt(date.getMonth()) + 1;
+        const day = date.getDate();
+        const hours = date.getHours();
+        const minutes = date.getMinutes();
+        setDateTime(
+          `${year}-${month > 10 ? month : "0" + month}-${
+            day > 10 ? day : "0" + day
+          } | ${hours > 10 ? hours : "0" + hours}:${
+            minutes > 10 ? minutes : "0" + minutes
+          } ${(hours) > 11 ? 'pm' : 'am'}`
+        );
+
         setLoading(false);
 
         let link = document.querySelector("link[rel~='icon']");
@@ -63,7 +79,7 @@ const Article = () => {
             <h2>{article.title}</h2>
             <div className="article-meta">
               <p>By {article.authors.join(", ")}</p>
-              <p>{article.createdAt}</p>
+              <p>{dateTime}</p>
               <div className="share">
                 <ShareButton platform="whatsapp" />
                 <ShareButton platform="twitter" />
